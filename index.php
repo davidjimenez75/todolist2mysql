@@ -1,8 +1,24 @@
 <?php
+/**
+ * todolist2csv
+ * 
+ * This script processes a .tdl file and imports the tasks into a MySQL database.
+ * 
+ * The script can be run from the command line or as a web interface.
+ * 
+ * Command line usage:
+ * php index.php <tdl_file>
+ * 
+ * Web interface:
+ * Upload a .tdl file using the web interface.
+ * 
+ */
+
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 const DEBUG = false;
+const VERSION = '24.10.06.1353';
 
 // Function to log messages
 function logMessage($message) {
@@ -238,7 +254,8 @@ function processTDLFile($filePath, $dbName) {
         $pdo->rollBack();
         logMessage("Error: " . $e->getMessage());
     }
-
+    
+    return 0; // return success to show the user that the file was processed successfully
 }
 
 // Check if script is run from CLI
@@ -266,9 +283,15 @@ if (php_sapi_name() === 'cli') {
             $dbName = pathinfo($_FILES['tdlFile']['name'], PATHINFO_FILENAME);
             $dbName = $dbName.".tdl"; // TODO: Create the database wih the same name as the tdl file
             $result = processTDLFile($_FILES['tdlFile']['tmp_name'], $dbName);
-            echo "<center>";
-            echo "<code>File [$dbName] uploaded successfully. $result</code>";
-            echo "</center>";
+            if ($result === 0) {
+                echo "<center>";
+                echo "<code>✅ File [$dbName] uploaded successfully.";
+                echo "</center>";
+            }else{
+                echo "<center>";
+                echo "<code>❌ File [$dbName] failed to upload.";
+                echo "</center>";
+            }
         } else {
             logMessage("File upload failed with error code: " . $_FILES['tdlFile']['error']);
         }
@@ -304,7 +327,8 @@ if (php_sapi_name() === 'cli') {
 <?php
 // Display success message if file was uploaded
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['tdlFile'])) {
-        echo $result;
+    $phpmyadmin='http://localhost/phpmyadmin/index.php?route=/sql&server=1&db='.$dbName.'&table=tasks&pos=0';
+    echo '<center><br><a href="'.$phpmyadmin.'" target="_blank">View Database</a></center>';
 }
 ?>
 
