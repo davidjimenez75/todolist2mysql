@@ -252,6 +252,8 @@ if (php_sapi_name() === 'cli') {
     // CLI processing code from CLI arguments
     $tdlFile = $argv[1];
     $dbName = pathinfo($tdlFile, PATHINFO_FILENAME);
+    $dbName = $dbName.".tdl"; // TODO: Create the database wih the same name as the tdl file
+
 
     logMessage("Processing file: $tdlFile");
     logMessage("Using database: $dbName");
@@ -262,6 +264,7 @@ if (php_sapi_name() === 'cli') {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['tdlFile'])) {
         if ($_FILES['tdlFile']['error'] === UPLOAD_ERR_OK) {
             $dbName = pathinfo($_FILES['tdlFile']['name'], PATHINFO_FILENAME);
+            $dbName = $dbName.".tdl"; // TODO: Create the database wih the same name as the tdl file
             processTDLFile($_FILES['tdlFile']['tmp_name'], $dbName);
         } else {
             logMessage("File upload failed with error code: " . $_FILES['tdlFile']['error']);
