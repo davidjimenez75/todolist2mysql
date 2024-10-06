@@ -37,3 +37,7 @@ From web:
 Drag and drog a *.tdl file
 ```
 
+
+## TO-DO
+
+- [ ] Import child taks (now only import root folder tasks)
