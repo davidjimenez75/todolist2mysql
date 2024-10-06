@@ -1,4 +1,11 @@
 <?php
+/**
+ * todolist2mysql
+ * 
+ * This script reads a TDL file and inserts the tasks into a MySQL database.
+ * 
+ */
+
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
