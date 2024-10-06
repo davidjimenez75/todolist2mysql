@@ -159,7 +159,8 @@ function processTDLFile($filePath, $dbName) {
     }
 
     logMessage("File size: " . strlen($content) . " bytes");
-    logMessage("First 100 characters: " . bin2hex(substr($content, 0, 100)));
+    logMessage("First 1000 characters of file content:");
+    logMessage(substr($content, 0, 1000));
     
     $xml = parseXML($content);
     
@@ -168,7 +169,18 @@ function processTDLFile($filePath, $dbName) {
         return;
     }
 
-    logMessage("XML structure: " . print_r($xml, true));
+    logMessage("XML structure:");
+    logMessage(print_r($xml, true));
+
+    // Log the names of all child elements of the root
+    logMessage("Child elements of root:");
+    foreach ($xml->children() as $child) {
+        logMessage($child->getName());
+    }
+
+    // Log the number of TASK elements found
+    $tasks = $xml->xpath('//TASK');
+    logMessage("Number of TASK elements found: " . count($tasks));
 
     $pdo = getDatabaseConnection($dbName);
 
@@ -178,6 +190,9 @@ function processTDLFile($filePath, $dbName) {
     try {
         $taskCount = 0;
         foreach ($xml->TASK as $task) {
+            logMessage("Processing task:");
+            logMessage(print_r($task, true));
+
             $taskData = (array)$task;
             // Check if attributes exist, if not, use the task element itself
             if (empty($taskData['@attributes'])) {
