@@ -3,6 +3,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Function to log messages
+function logMessage($message) {
+    echo $message . "\n";
+    error_log($message);
+}
+
 // Function to create database if it doesn't exist
 function createDatabaseIfNotExists($dbName) {
     $host = 'localhost';
@@ -15,18 +21,23 @@ function createDatabaseIfNotExists($dbName) {
 
         $sql = "CREATE DATABASE IF NOT EXISTS `$dbName` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
         $pdo->exec($sql);
-        echo "Database $dbName created successfully or already exists.\n";
+        logMessage("Database $dbName created successfully or already exists.");
 
         // Use the newly created database
         $pdo->exec("USE `$dbName`");
 
         // Import the schema from todolist.sql
         $schema = file_get_contents('todolist.sql');
+        if ($schema === false) {
+            throw new Exception("Failed to read todolist.sql");
+        }
         $pdo->exec($schema);
-        echo "Schema imported successfully.\n";
+        logMessage("Schema imported successfully.");
 
     } catch (PDOException $e) {
         die("DB ERROR: " . $e->getMessage());
+    } catch (Exception $e) {
+        die("ERROR: " . $e->getMessage());
     }
 }
 
@@ -55,20 +66,19 @@ function getDatabaseConnection($dbName) {
 
 // Function to insert task into database
 function insertTask($pdo, $task) {
-    // Log the task data
-    error_log("Task data: " . print_r($task, true));
+    logMessage("Inserting task: " . print_r($task, true));
 
     // Ensure title is not null
     $title = $task['TITLE'] ?? $task['title'] ?? null;
     if ($title === null) {
-        error_log("Task without title: " . print_r($task, true));
+        logMessage("Task without title: " . print_r($task, true));
         return null; // Skip tasks without a title
     }
 
     $sql = "INSERT INTO tasks (title, status, priority, percentdone, startdate, duedate, creationdate, lastmod, comments) 
             VALUES (:title, :status, :priority, :percentdone, :startdate, :duedate, :creationdate, :lastmod, :comments)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([
+    $result = $stmt->execute([
         ':title' => $title,
         ':status' => $task['STATUS'] ?? $task['status'] ?? null,
         ':priority' => $task['PRIORITY'] ?? $task['priority'] ?? null,
@@ -79,7 +89,15 @@ function insertTask($pdo, $task) {
         ':lastmod' => $task['LASTMOD'] ?? $task['lastmod'] ?? null,
         ':comments' => $task['COMMENTS'] ?? $task['comments'] ?? null
     ]);
-    return $pdo->lastInsertId();
+
+    if ($result) {
+        $taskId = $pdo->lastInsertId();
+        logMessage("Task inserted successfully. ID: $taskId");
+        return $taskId;
+    } else {
+        logMessage("Failed to insert task: " . print_r($stmt->errorInfo(), true));
+        return null;
+    }
 }
 
 // Function to insert category into database
@@ -87,14 +105,21 @@ function insertCategory($pdo, $categoryName) {
     $sql = "INSERT IGNORE INTO categories (name) VALUES (:name)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':name' => $categoryName]);
-    return $pdo->lastInsertId() ?: $pdo->query("SELECT id FROM categories WHERE name = " . $pdo->quote($categoryName))->fetchColumn();
+    $categoryId = $pdo->lastInsertId() ?: $pdo->query("SELECT id FROM categories WHERE name = " . $pdo->quote($categoryName))->fetchColumn();
+    logMessage("Category inserted or retrieved. ID: $categoryId, Name: $categoryName");
+    return $categoryId;
 }
 
 // Function to link task and category
 function linkTaskCategory($pdo, $taskId, $categoryId) {
     $sql = "INSERT IGNORE INTO task_categories (task_id, category_id) VALUES (:task_id, :category_id)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([':task_id' => $taskId, ':category_id' => $categoryId]);
+    $result = $stmt->execute([':task_id' => $taskId, ':category_id' => $categoryId]);
+    if ($result) {
+        logMessage("Task $taskId linked with category $categoryId");
+    } else {
+        logMessage("Failed to link task $taskId with category $categoryId: " . print_r($stmt->errorInfo(), true));
+    }
 }
 
 // Function to attempt XML parsing with different encodings
@@ -113,12 +138,12 @@ function parseXML($content) {
         libxml_use_internal_errors(true);
         $xml = simplexml_load_string($xmlContent);
         if ($xml !== false) {
-            error_log("Successfully parsed XML with encoding: " . $encoding);
+            logMessage("Successfully parsed XML with encoding: $encoding");
             return $xml;
         }
-        error_log("Failed to parse XML with encoding: " . $encoding);
+        logMessage("Failed to parse XML with encoding: $encoding");
         foreach(libxml_get_errors() as $error) {
-            error_log("XML Parse Error: " . $error->message);
+            logMessage("XML Parse Error: " . $error->message);
         }
         libxml_clear_errors();
     }
@@ -129,22 +154,21 @@ function parseXML($content) {
 function processTDLFile($filePath, $dbName) {
     $content = file_get_contents($filePath);
     if ($content === false) {
-        echo "Failed to read the file: $filePath\n";
+        logMessage("Failed to read the file: $filePath");
         return;
     }
 
-    error_log("File size: " . strlen($content) . " bytes");
-    error_log("First 100 characters: " . bin2hex(substr($content, 0, 100)));
+    logMessage("File size: " . strlen($content) . " bytes");
+    logMessage("First 100 characters: " . bin2hex(substr($content, 0, 100)));
     
     $xml = parseXML($content);
     
     if ($xml === false) {
-        echo "Failed to parse XML. Please check the error log for details.\n";
+        logMessage("Failed to parse XML. Please check the error log for details.");
         return;
     }
 
-    // Log the structure of the XML
-    error_log("XML structure: " . print_r($xml, true));
+    logMessage("XML structure: " . print_r($xml, true));
 
     $pdo = getDatabaseConnection($dbName);
 
@@ -177,13 +201,11 @@ function processTDLFile($filePath, $dbName) {
         
         // Commit transaction
         $pdo->commit();
-        echo "Data inserted successfully. Total tasks processed: $taskCount\n";
-        error_log("Successfully processed file: $filePath. Tasks inserted: $taskCount");
+        logMessage("Data inserted successfully. Total tasks processed: $taskCount");
     } catch (Exception $e) {
         // Rollback transaction on error
         $pdo->rollBack();
-        echo "Error: " . $e->getMessage() . "\n";
-        error_log("Database Error: " . $e->getMessage());
+        logMessage("Error: " . $e->getMessage());
     }
 }
 
@@ -197,8 +219,8 @@ if (php_sapi_name() === 'cli') {
     $tdlFile = $argv[1];
     $dbName = pathinfo($tdlFile, PATHINFO_FILENAME);
 
-    echo "Processing file: $tdlFile\n";
-    echo "Using database: $dbName\n";
+    logMessage("Processing file: $tdlFile");
+    logMessage("Using database: $dbName");
 
     processTDLFile($tdlFile, $dbName);
 } else {
@@ -208,13 +230,12 @@ if (php_sapi_name() === 'cli') {
             $dbName = pathinfo($_FILES['tdlFile']['name'], PATHINFO_FILENAME);
             processTDLFile($_FILES['tdlFile']['tmp_name'], $dbName);
         } else {
-            echo "File upload failed with error code: " . $_FILES['tdlFile']['error'];
-            error_log("File upload failed: " . $_FILES['tdlFile']['name'] . ". Error code: " . $_FILES['tdlFile']['error']);
+            logMessage("File upload failed with error code: " . $_FILES['tdlFile']['error']);
         }
     }
 }
 
-// if we are in CLI then exit here to prevent the HTML from being output
+// DONT REMOVE - if we are in CLI then exit here to prevent the rest of HTML from being output in CLI mode
 if (php_sapi_name() === 'cli') {
     exit(0);
 }
