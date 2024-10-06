@@ -115,7 +115,7 @@ function insertTask($pdo, $task) {
     $title = $task['TITLE'] ?? $task['title'] ?? null;
 
     // visual in website
-    echo "<code>- $title</code><br>";
+    echo "<code>- $title</code><br>\r\n";
 
     // show the title of the task
     logMessage("Task title: $title");
