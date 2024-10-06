@@ -24,3 +24,4 @@ Homestead.json
 
 # Ignored extensions
 *.tdl
+*.log
