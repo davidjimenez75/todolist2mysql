@@ -9,7 +9,7 @@ function logMessage($message) {
     error_log($message);
 }
 
-// Function to create database if it doesn't exist
+// Function to create database if it doesn't exist and delete if exists
 function createDatabaseIfNotExists($dbName) {
     $host = 'localhost';
     $user = 'root';  // Adjust if different
@@ -19,6 +19,12 @@ function createDatabaseIfNotExists($dbName) {
         $pdo = new PDO("mysql:host=$host", $user, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        //FIXME: delete database if exists
+        $sql = "DROP DATABASE IF EXISTS `$dbName`";
+        $pdo->exec($sql);
+        logMessage("Database $dbName deleted successfully or does not exist.");
+
+        // Create database if it doesn't exist
         $sql = "CREATE DATABASE IF NOT EXISTS `$dbName` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
         $pdo->exec($sql);
         logMessage("Database $dbName created successfully or already exists.");
