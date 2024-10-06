@@ -143,7 +143,7 @@ function insertTask($pdo, $task) {
     }
 
     $sql = "INSERT INTO tasks (id, title, status, priority, percentdone, startdate, duedate, creationdate, lastmod, comments) 
-            VALUES (:title, :status, :priority, :percentdone, :startdate, :duedate, :creationdate, :lastmod, :comments)";
+            VALUES (:id, :title, :status, :priority, :percentdone, :startdate, :duedate, :creationdate, :lastmod, :comments)";
     $stmt = $pdo->prepare($sql);
     $result = $stmt->execute([
         ':id' => $id ?? $task['ID'] ?? $task['id'] ?? null,
