@@ -265,7 +265,10 @@ if (php_sapi_name() === 'cli') {
         if ($_FILES['tdlFile']['error'] === UPLOAD_ERR_OK) {
             $dbName = pathinfo($_FILES['tdlFile']['name'], PATHINFO_FILENAME);
             $dbName = $dbName.".tdl"; // TODO: Create the database wih the same name as the tdl file
-            processTDLFile($_FILES['tdlFile']['tmp_name'], $dbName);
+            $result = processTDLFile($_FILES['tdlFile']['tmp_name'], $dbName);
+            echo "<center>";
+            echo "<code>File [$dbName] uploaded successfully. $result</code>";
+            echo "</center>";
         } else {
             logMessage("File upload failed with error code: " . $_FILES['tdlFile']['error']);
         }
@@ -284,7 +287,7 @@ if (php_sapi_name() === 'cli') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDL File Upload</title>
+    <title>todolist2csv</title>
     <style>
         #drop_zone {
             border: 2px dashed #ccc;
@@ -296,13 +299,23 @@ if (php_sapi_name() === 'cli') {
     </style>
 </head>
 <body>
-    <h1>Upload TDL File</h1>
+    <center>
+
+<?php
+// Display success message if file was uploaded
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['tdlFile'])) {
+        echo $result;
+}
+?>
+
+    <h1>todolist2csv</h1>
     <div id="drop_zone">
         <p>Drag and drop a .tdl file here</p>
         <form id="upload_form" method="post" enctype="multipart/form-data">
             <input type="file" name="tdlFile" id="file_input" style="display: none;" accept=".tdl">
         </form>
     </div>
+    </center>
 
     <script>
         var dropZone = document.getElementById('drop_zone');
