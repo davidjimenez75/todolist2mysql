@@ -90,7 +90,11 @@ function getDatabaseConnection($dbName) {
 // Function to insert task into database
 function insertTask($pdo, $task) {
     logMessage("insertTask--BEGIN");
-    if (DEBUG) print_r($task, true);
+    logMessage("\r\n");
+    logMessage("```");
+    print_r($task);
+    logMessage("```");
+    
 
     // FIXME: Check if the task has attributes an subtasks
     if($task['@attributes']) {
@@ -158,20 +162,22 @@ function insertTask($pdo, $task) {
         ':comments' => $comments ?? $task['COMMENTS'] ?? $task['comments'] ?? null
     ]);
 
-    // debug the last SQL query
-    logMessage("Task insert data: " . print_r($task, true));
-    logMessage("Task insert SQL: " . $stmt->queryString);
-
+    // Check if the task was inserted successfully       
     if ($result) {
         $taskId = $pdo->lastInsertId();
-        logMessage("Task inserted successfully. ID: $taskId");
+        logMessage("OK--Task inserted successfully. ID: $taskId");
         logMessage("insertTask--END");
         return $taskId;
     } else {
-        logMessage("Failed to insert task: " . print_r($stmt->errorInfo(), true));
+        logMessage("ERROR--Failed to insert task: " . print_r($stmt->errorInfo(), true));
         logMessage("insertTask--END");
         return null;
     }
+
+    // pause while key is pressed
+    logMessage("Press any key to continue...");
+    $key = fgetc(STDIN);
+
 }
 
 // Function to insert category into database
