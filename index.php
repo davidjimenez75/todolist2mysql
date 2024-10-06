@@ -2,10 +2,10 @@
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+const DEBUG = false;
 
 // Function to log messages
 function logMessage($message) {
-    echo $message . "\n";
     error_log($message);
 }
 
@@ -72,7 +72,7 @@ function getDatabaseConnection($dbName) {
 
 // Function to insert task into database
 function insertTask($pdo, $task) {
-    logMessage("Inserting task: " . print_r($task, true));
+    if (DEBUG) logMessage("Inserting task: " . print_r($task, true));
 
     // Ensure title is not null
     $title = $task['TITLE'] ?? $task['title'] ?? null;
@@ -164,40 +164,43 @@ function processTDLFile($filePath, $dbName) {
         return;
     }
 
-    logMessage("File size: " . strlen($content) . " bytes");
-    logMessage("First 1000 characters of file content:");
-    logMessage(substr($content, 0, 1000));
+    if (DEBUG) logMessage("File size: " . strlen($content) . " bytes");
+    if (DEBUG) logMessage("First 1000 characters of file content:");
+    if (DEBUG) logMessage(substr($content, 0, 1000));
     
     $xml = parseXML($content);
     
     if ($xml === false) {
-        logMessage("Failed to parse XML. Please check the error log for details.");
+        if (DEBUG) logMessage("Failed to parse XML. Please check the error log for details.");
         return;
     }
 
     logMessage("XML structure:");
-    logMessage(print_r($xml, true));
+    if (DEBUG) logMessage(print_r($xml, true));
 
     // Log the names of all child elements of the root
     logMessage("Child elements of root:");
     foreach ($xml->children() as $child) {
-        logMessage($child->getName());
+        if (DEBUG) logMessage($child->getName());
     }
 
     // Log the number of TASK elements found
     $tasks = $xml->xpath('//TASK');
     logMessage("Number of TASK elements found: " . count($tasks));
 
+    // Get database connection
     $pdo = getDatabaseConnection($dbName);
 
     // Start transaction
     $pdo->beginTransaction();
     
+    // Process each TASK element
+    logMessage ("Processing TASKS - START");
     try {
         $taskCount = 0;
         foreach ($xml->TASK as $task) {
-            logMessage("Processing task:");
-            logMessage(print_r($task, true));
+            logMessage("Processing task (taskCount=$taskCount)\r\n");
+            //logMessage(print_r($task, true));
 
             $taskData = (array)$task;
             // Check if attributes exist, if not, use the task element itself
@@ -207,9 +210,11 @@ function processTDLFile($filePath, $dbName) {
                 $taskData = (array)$task->attributes();
             }
             $taskId = insertTask($pdo, $taskData);
+
+            // If the taskId is not null, then process categories
             if ($taskId !== null) {
                 $taskCount++;
-                
+               
                 // Handle categories
                 if (isset($task->CATEGORY)) {
                     foreach ($task->CATEGORY as $category) {
@@ -219,6 +224,7 @@ function processTDLFile($filePath, $dbName) {
                 }
             }
         }
+        logMessage ("Processing TASKS - END");
         
         // Commit transaction
         $pdo->commit();
@@ -228,15 +234,18 @@ function processTDLFile($filePath, $dbName) {
         $pdo->rollBack();
         logMessage("Error: " . $e->getMessage());
     }
+
 }
 
 // Check if script is run from CLI
 if (php_sapi_name() === 'cli') {
+    // CLI arguments check
     if ($argc != 2) {
         echo "Usage: php index.php <tdl_file>\n";
         exit(1);
     }
 
+    // CLI processing code from CLI arguments
     $tdlFile = $argv[1];
     $dbName = pathinfo($tdlFile, PATHINFO_FILENAME);
 
@@ -258,7 +267,7 @@ if (php_sapi_name() === 'cli') {
 
 // DONT REMOVE - if we are in CLI then exit here to prevent the rest of HTML from being output in CLI mode
 if (php_sapi_name() === 'cli') {
-    exit(0);
+    die(0);
 }
 
 ?>
