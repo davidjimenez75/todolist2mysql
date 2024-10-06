@@ -89,10 +89,51 @@ function getDatabaseConnection($dbName) {
 
 // Function to insert task into database
 function insertTask($pdo, $task) {
-    if (DEBUG) logMessage("Inserting task: " . print_r($task, true));
+    logMessage("insertTask--BEGIN");
+    if (DEBUG) print_r($task, true);
+
+    // FIXME: Check if the task has attributes an subtasks
+    if($task['@attributes']) {
+        // comments are not attributes
+        $comments=$task['COMMENTS'] ?? $task['comments'] ?? null;
+
+        
+        // get startdate from attributes and transfor to  YYYY-MM-DD
+        $startdate = $task['@attributes']['STARTDATE'] ?? null;
+        if($startdate) {
+            $startdate = startdate2mysql($startdate);
+        }
+       
+        // FIXME: change the task to the attributes
+        $task = $task['@attributes'];       
+    }
 
     // Ensure title is not null
     $title = $task['TITLE'] ?? $task['title'] ?? null;
+
+    // visual in website
+    echo "<code>- $title</code><br>";
+
+    // show the title of the task
+    logMessage("Task title: $title");
+
+    // show startdate if it exists
+    if ($startdate) {
+        logMessage("Task startdate: $startdate");
+    }
+
+    // show comments if they exist
+    if ($comments) {
+        logMessage("Task comments: ");
+        logMessage("```");
+        logMessage($comments);
+        logMessage("```\r\n");
+    }
+
+
+
+
+    // Skip tasks without a title
     if ($title === null) {
         logMessage("ERROR: Task without title: " . print_r($task, true));
         return null; // Skip tasks without a title
@@ -106,19 +147,25 @@ function insertTask($pdo, $task) {
         ':status' => $task['STATUS'] ?? $task['status'] ?? null,
         ':priority' => $task['PRIORITY'] ?? $task['priority'] ?? null,
         ':percentdone' => $task['PERCENTDONE'] ?? $task['percentdone'] ?? null,
-        ':startdate' => $task['STARTDATE'] ?? $task['startdate'] ?? null,
+        ':startdate' => $startdate ?? $task['STARTDATE'] ?? $task['startdate'] ?? null,
         ':duedate' => $task['DUEDATE'] ?? $task['duedate'] ?? null,
         ':creationdate' => $task['CREATIONDATE'] ?? $task['creationdate'] ?? null,
         ':lastmod' => $task['LASTMOD'] ?? $task['lastmod'] ?? null,
-        ':comments' => $task['COMMENTS'] ?? $task['comments'] ?? null
+        ':comments' => $comments ?? $task['COMMENTS'] ?? $task['comments'] ?? null
     ]);
+
+    // debug the last SQL query
+    logMessage("Task insert data: " . print_r($task, true));
+    logMessage("Task insert SQL: " . $stmt->queryString);
 
     if ($result) {
         $taskId = $pdo->lastInsertId();
         logMessage("Task inserted successfully. ID: $taskId");
+        logMessage("insertTask--END");
         return $taskId;
     } else {
         logMessage("Failed to insert task: " . print_r($stmt->errorInfo(), true));
+        logMessage("insertTask--END");
         return null;
     }
 }
@@ -173,8 +220,27 @@ function parseXML($content) {
     return false;
 }
 
+// Function to convert Excel date to MySQL date
+function startdate2mysql($date) {
+    // Ensure the input is a float
+    $numeric_date = floatval($date);
+    
+    // Excel's start date (January 1, 1900)
+    $excel_start_date = '1900-01-01';
+    
+    // Convert Excel date to Unix timestamp
+    // Subtract 25569 to account for difference between 1900-01-01 and 1970-01-01
+    $unix_timestamp = ($numeric_date - 25569) * 86400;
+    
+    // Format the date in MySQL format (yyyy-mm-dd)
+    $mysql_date = date('Y-m-d', $unix_timestamp);
+    
+    return $mysql_date;
+}
+
 // Function to process TDL file
 function processTDLFile($filePath, $dbName) {
+    logMessage("processTDLFile--BEGIN");
     $content = file_get_contents($filePath);
     if ($content === false) {
         logMessage("Failed to read the file: $filePath");
@@ -212,11 +278,12 @@ function processTDLFile($filePath, $dbName) {
     $pdo->beginTransaction();
     
     // Process each TASK element
-    logMessage ("Processing TASKS - START");
+    logMessage ("TASKS-LOOP--BEGIN");
     try {
         $taskCount = 0;
         foreach ($xml->TASK as $task) {
-            logMessage("Processing task (taskCount=$taskCount)\r\n");
+            logMessage("\r\n----");
+            logMessage("### Processing task (taskCount=$taskCount)\r\n");
             //logMessage(print_r($task, true));
 
             $taskData = (array)$task;
@@ -226,7 +293,8 @@ function processTDLFile($filePath, $dbName) {
                 $taskData = (array)$task;
             } else {
                 if (DEBUG) echo "Found attributes\r\n";
-                $taskData = array_merge(array(), (array)$taskData['@attributes']);//FIXME - check if this is correct
+                //$taskData = array_merge(array(), (array)$taskData['@attributes']);//FIXME - check this for not root tasks
+                $taskData = (array)$task;
             }
             // Insert task into database
             $taskId = insertTask($pdo, $taskData);
@@ -244,7 +312,8 @@ function processTDLFile($filePath, $dbName) {
                 }
             }
         }
-        logMessage ("Processing TASKS - END");
+        logMessage ("TASKS-LOOP--END");
+        logMessage ("----");
         
         // Commit transaction
         $pdo->commit();
@@ -256,6 +325,7 @@ function processTDLFile($filePath, $dbName) {
         logMessage("Error: " . $e->getMessage());
     }
     
+    logMessage("processTDLFile--END");
     return 0; // return success to show the user that the file was processed successfully
 }
 
@@ -330,13 +400,13 @@ if (php_sapi_name() === 'cli') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['tdlFile'])) {
     // Display link to phpMyAdmin if enabled
     if (DISPLAY_DATABASE_URL) {
-        $phpmyadmin='http://localhost/phpmyadmin/index.php?route=/sql&server=1&db='.$dbName.'&table=tasks&pos=0';
-        echo '<center><br><a href="'.$phpmyadmin.'" target="_blank">View Database</a></center>';
+        $display_database_url='http://localhost/phpmyadmin/index.php?route=/sql&db='.$dbName.'&table=tasks&sql_query=SELECT+%2A+FROM+%60tasks%60++%0AORDER+BY+%60tasks%60.%60title%60+ASC&session_max_rows=255&is_browse_distinct=0';
+        echo '<center><br><a href="'.$display_database_url.'" target="_blank">View Database</a></center>';
     }
 }
 ?>
 
-    <h1>todolist2csv</h1>
+    <h1><a href="./index.php">todolist2csv</a></h1>
     <div id="drop_zone">
         <p>Drag and drop a .tdl file here</p>
         <form id="upload_form" method="post" enctype="multipart/form-data">

@@ -40,4 +40,5 @@ Drag and drog a *.tdl file
 
 ## TO-DO
 
+- [ ] Import root tasks comments
 - [ ] Import child taks (now only import root folder tasks)
