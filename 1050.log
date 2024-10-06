@@ -1,0 +1,3490 @@
+Microsoft Windows [Versión 10.0.19045.4957]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\usuario>cd \xampp\htdocs
+
+C:\xampp\htdocs>php index.php todolist.tdl > 1050.log
+File size: 66980 bytes
+First 100 characters: fffe3c003f0078006d006c002000760065007200730069006f006e003d00220031002e0030002200200065006e0063006f00640069006e0067003d0022007500740066002d003100360022003f003e000d000a003c0054004f0044004f004c0049005300
+Successfully parsed XML with encoding: UTF-8
+XML structure: SimpleXMLElement Object
+(
+    [@attributes] => Array
+        (
+            [PROJECTNAME] => 2024
+            [EARLIESTDUEDATE] => 45569.99998843
+            [LASTMOD] => 45571.40107639
+            [LASTMODSTRING] => 06/10/2024 9:37
+            [FILENAME] => 2024.tdl
+            [NEXTUNIQUEID] => 206
+            [FILEVERSION] => 1102
+            [APPVER] => 8.999.998.7
+            [FILEFORMAT] => 12
+        )
+
+    [CUSTOMATTRIBDEF] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => CUST_PRECIO
+                            [LABEL] => Precio
+                            [COLTITLE] =>
+                            [TYPE] => 3
+                            [COLALIGN] => 2
+                            [FEATURES] => 1
+                            [ENABLED] => 1
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => CUST_LUGAR
+                            [LABEL] => Lugar
+                            [COLTITLE] =>
+                            [TYPE] => 0
+                            [COLALIGN] => 0
+                            [FEATURES] => 1
+                            [ENABLED] => 1
+                        )
+
+                )
+
+        )
+
+    [TASK] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 201
+                            [TITLE] => 2024-10-00
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45569.00000000
+                            [STARTDATESTRING] => 04/10/2024
+                            [CREATIONDATE] => 45569.82340278
+                            [CREATIONDATESTRING] => 04/10/2024 19:45
+                            [LASTMOD] => 45569.88393519
+                            [LASTMODSTRING] => 04/10/2024 21:12
+                            [LASTMODBY] => usuario
+                            [POS] => 0
+                            [POSSTRING] => 1
+                            [CALCPERCENTDONE] => 13
+                            [CALCTIMEESTIMATE] => 30.00000000
+                            [CALCTIMEESTUNITS] => I
+                            [CALCTIMESPENT] => 18.20884980
+                            [CALCTIMESPENTUNITS] => I
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                            [SUBTASKDONE] => 2/28
+                        )
+
+                    [TASK] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 123
+                                            [TITLE] => ALMACEN--IDEA--Idea de usar un maletin con 20 disco duros SATA de 4 6 y 8 TB (100eu)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 30.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45445.00000000
+                                            [STARTDATESTRING] => 02/06/2024
+                                            [CREATIONDATE] => 45445.40630787
+                                            [CREATIONDATESTRING] => 02/06/2024 9:45
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 0
+                                            [POSSTRING] => 1.1
+                                            [CALCTIMEESTIMATE] => 30.00000000
+                                            [CALCTIMEESTUNITS] => I
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => - [_] PROBAR--Que tal es meter disco duros de LINUX en DEBIAN12. Automount?
+- [x] ICYDOCK--Comprados un total de 5 extraibles para MIPC (4 HDS)
+                                    [CUSTOMCOMMENTS] => YABgAGAACgAtACAAWwBfAF0AIABQAFIATwBCAEEAUgAtAC0AUQB1AGUAIAB0AGEAbAAgAGUAcwAgAG0AZQB0AGUAcgAgAGQAaQBzAGMAbwAgAGQAdQByAG8AcwAgAGQAZQAgAEwASQBOAFUAWAAgAGUAbgAgAEQARQBCAEkAQQBOADEAMgAuACAAQQB1AHQAbwBtAG8AdQBuAHQAPwAKAC0AIABbAHgAXQAgAEkAQwBZAEQATwBDAEsALQAtAEMAbwBtAHAAcgBhAGQAbwBzACAAdQBuACAAdABvAHQAYQBsACAAZABlACAANQAgAGUAeAB0AHIAYQBpAGIAbABlAHMAIABwAGEAcgBhACAATQBJAFAAQwAgACgANAAgAEgARABTACkACgBgAGAAYAAKAAoACgAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 204
+                                            [TITLE] => TODOLIST---Probar a leer y escribir en MySQL
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [DONEDATE] => 45569.85292824
+                                            [DONEDATESTRING] => 04/10/2024 20:28
+                                            [PERCENTDONE] => 100
+                                            [STARTDATE] => 45569.00000000
+                                            [STARTDATESTRING] => 04/10/2024
+                                            [CREATIONDATE] => 45569.85275463
+                                            [CREATIONDATESTRING] => 04/10/2024 20:27
+                                            [LASTMOD] => 45569.85292824
+                                            [LASTMODSTRING] => 04/10/2024 20:28
+                                            [LASTMODBY] => usuario
+                                            [POS] => 1
+                                            [POSSTRING] => 1.2
+                                            [CALCPERCENTDONE] => 100
+                                            [TEXTCOLOR] => 4276287
+                                            [TEXTWEBCOLOR] => #3F4041
+                                            [PRIORITYCOLOR] => 57630
+                                            [PRIORITYWEBCOLOR] => #1EE100
+                                            [GOODASDONE] => 1
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 186
+                                            [TITLE] => ALMACEN--IDEA--Separar los disco duros en las tres caja SILVERCHAIR ARMOR con X79
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45488.00000000
+                                            [STARTDATESTRING] => 15/07/2024
+                                            [CREATIONDATE] => 45488.90976852
+                                            [CREATIONDATESTRING] => 15/07/2024 21:50
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 2
+                                            [POSSTRING] => 1.3
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => - PRO--El servidor XEON 2670 de 64GB - Tiene una placa X79G--14 disco duros
+- PRO--Espacio de sobra para poner al menos 6 por caja
+- CONTRAS--Consumo y ruido
+- CONTRAS--No sirven para OLLAMA
+                                    [CUSTOMCOMMENTS] => YABgAGAACgAtACAAUABSAE8ALQAtAEUAbAAgAHMAZQByAHYAaQBkAG8AcgAgAFgARQBPAE4AIAAyADYANwAwACAAZABlACAANgA0AEcAQgAgAC0AIABUAGkAZQBuAGUAIAB1AG4AYQAgAHAAbABhAGMAYQAgAFgANwA5AEcALQAtADEANAAgAGQAaQBzAGMAbwAgAGQAdQByAG8AcwAKAC0AIABQAFIATwAtAC0ARQBzAHAAYQBjAGkAbwAgAGQAZQAgAHMAbwBiAHIAYQAgAHAAYQByAGEAIABwAG8AbgBlAHIAIABhAGwAIABtAGUAbgBvAHMAIAA2ACAAcABvAHIAIABjAGEAagBhAAoALQAgAEMATwBOAFQAUgBBAFMALQAtAEMAbwBuAHMAdQBtAG8AIAB5ACAAcgB1AGkAZABvAAoALQAgAEMATwBOAFQAUgBBAFMALQAtAE4AbwAgAHMAaQByAHYAZQBuACAAcABhAHIAYQAgAE8ATABMAEEATQBBAAoAYABgAGAACgAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 200
+                                            [TITLE] => CAMA---Limpiar la parte de abajo que tiene muchas pelusas
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45569.00000000
+                                            [STARTDATESTRING] => 04/10/2024
+                                            [CREATIONDATE] => 45569.79265046
+                                            [CREATIONDATESTRING] => 04/10/2024 19:01
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 3
+                                            [POSSTRING] => 1.4
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 187
+                                            [TITLE] => CLICKUP--Decidir si me paso al CLICKUP o sigo en TODOLIST o WIKI
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [FLAG] => 1
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45507.00000000
+                                            [STARTDATESTRING] => 03/08/2024
+                                            [CREATIONDATE] => 45507.46747685
+                                            [CREATIONDATESTRING] => 03/08/2024 11:13
+                                            [LASTMOD] => 45569.88466435
+                                            [LASTMODSTRING] => 04/10/2024 21:13
+                                            [LASTMODBY] => usuario
+                                            [POS] => 4
+                                            [POSSTRING] => 1.5
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => DUDA--Es mejor CLICKUP que TODOLIST?
+PORTABILIDAD--Es mejor CLICKUP para usar en LINUX
+ITINERANCIA--Es mejor CLICKUP para viajar
+VELOCIDAD--Ambos me resulan lentos
+                                    [CUSTOMCOMMENTS] => LQAgAEQAVQBEAEEALQAtAEUAcwAgAG0AZQBqAG8AcgAgAEMATABJAEMASwBVAFAAIABxAHUAZQAgAFQATwBEAE8ATABJAFMAVAA/AAoALQAgAFAATwBSAFQAQQBCAEkATABJAEQAQQBEAC0ALQBFAHMAIABtAGUAagBvAHIAIABDAEwASQBDAEsAVQBQACAAcABhAHIAYQAgAHUAcwBhAHIAIABlAG4AIABMAEkATgBVAFgACgAtACAASQBUAEkATgBFAFIAQQBOAEMASQBBAC0ALQBFAHMAIABtAGUAagBvAHIAIABDAEwASQBDAEsAVQBQACAAcABhAHIAYQAgAHYAaQBhAGoAYQByAAoALQAgAFYARQBMAE8AQwBJAEQAQQBEAC0ALQBBAG0AYgBvAHMAIABtAGUAIAByAGUAcwB1AGwAYQBuACAAbABlAG4AdABvAHMACgAKAAoA
+                                    [CATEGORY] => CLICKUP
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 125
+                                            [TITLE] => CLUSTER--RYZEN--Que hacer con los 3 ordenadores del cluster de RYZENS 2200G - PENDIENTES de nueva version proxmox
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45447.00000000
+                                            [STARTDATESTRING] => 04/06/2024
+                                            [CREATIONDATE] => 45447.50768519
+                                            [CREATIONDATESTRING] => 04/06/2024 12:11
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 5
+                                            [POSSTRING] => 1.6
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CLUSTER
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 181
+                                            [TITLE] => CLUSTER--RYZEN--Subirlos encima de la mesa de madera de IKEA 15eu con el monitor pequeño encima
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.43716435
+                                            [CREATIONDATESTRING] => 01/07/2024 10:29
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 6
+                                            [POSSTRING] => 1.7
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CLUSTER
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 127
+                                            [TITLE] => CRIPTOS--Listado de Criptos a evaluar en 2024
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45447.00000000
+                                            [STARTDATESTRING] => 04/06/2024
+                                            [CREATIONDATE] => 45447.51155093
+                                            [CREATIONDATESTRING] => 04/06/2024 12:16
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 7
+                                            [POSSTRING] => 1.8
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => https://x.com/NeetrihtrM/status/1758542171550994923
+
+Mr13|Project Seraphim.XRP   ‍☠️
+@NeetrihtrM
+
+BTC = NEW GOLD in digital form or something better than gold
+XRP= VEHICLE FOR BANKS TO SEND VALUES LIKE BTC OR GOLD THEY BEEN HOARDING FOR YEARS
+XLM = ANOTHER FRANCTION OF MONEY THAT WILL WATCH ALL CURRENCY IN ALL COUNTRIES
+SHX = NEW FORM OF US DOLLARS
+XDC = Hybrid CBP Finance
+----
+HBAR = POWERFUL HASHGRAPH TOOL TO HELP BLOCKCHAIN TECHNOLOGY
+
+SOLO =  is a decentralized ecosystem built on the XRP Ledger that aims to facilitate the tokenization of assets, including stocks, ETFs, and commodities.
+----
+XPR = is to create a decentralized and interoperable platform for managing digital identities and financial services
+
+ MIOTA = decentralized platform for the Internet of Things (IoT)
+----
+ALGO = supports the creation and execution of smart contracts, which enable the development of decentralized applications (dApps) for various financial services, including lending, borrowing, and trading.
+
+then ima stop here too lazy to write the rest lol
+----
+----
+----
+----
+                                    [CUSTOMCOMMENTS] => LQAgAGgAdAB0AHAAcwA6AC8ALwB4AC4AYwBvAG0ALwBOAGUAZQB0AHIAaQBoAHQAcgBNAC8AcwB0AGEAdAB1AHMALwAxADcANQA4ADUANAAyADEANwAxADUANQAwADkAOQA0ADkAMgAzAAoACgBgAGAAYAAKAAoATQByADEAMwB8AFAAcgBvAGoAZQBjAHQAIABTAGUAcgBhAHAAaABpAG0ALgBYAFIAUAAgADzY9N8NICAmD/4+2J3eCgBAAE4AZQBlAHQAcgBpAGgAdAByAE0ACgAKAEIAVABDACAAPQAgAE4ARQBXACAARwBPAEwARAAgAGkAbgAgAGQAaQBnAGkAdABhAGwAIABmAG8AcgBtACAAbwByACAAcwBvAG0AZQB0AGgAaQBuAGcAIABiAGUAdAB0AGUAcgAgAHQAaABhAG4AIABnAG8AbABkAAoAWABSAFAAPQAgAFYARQBIAEkAQwBMAEUAIABGAE8AUgAgAEIAQQBOAEsAUwAgAFQATwAgAFMARQBOAEQAIABWAEEATABVAEUAUwAgAEwASQBLAEUAIABCAFQAQwAgAE8AUgAgAEcATwBMAEQAIABUAEgARQBZACAAQgBFAEUATgAgAEgATwBBAFIARABJAE4ARwAgAEYATwBSACAAWQBFAEEAUgBTAAoAWABMAE0AIAA9ACAAQQBOAE8AVABIAEUAUgAgAEYAUgBBAE4AQwBUAEkATwBOACAATwBGACAATQBPAE4ARQBZACAAVABIAEEAVAAgAFcASQBMAEwAIABXAEEAVABDAEgAIABBAEwATAAgAEMAVQBSAFIARQBOAEMAWQAgAEkATgAgAEEATABMACAAQwBPAFUATgBUAFIASQBFAFMAIAAKAFMASABYACAAPQAgAE4ARQBXACAARgBPAFIATQAgAE8ARgAgAFUAUwAgAEQATwBMAEwAQQBSAFMACgBYAEQAQwAgAD0AIABIAHkAYgByAGkAZAAgAEMAQgBQACAARgBpAG4AYQBuAGMAZQAKAC0ALQAtAC0ACgBIAEIAQQBSACAAPQAgAFAATwBXAEUAUgBGAFUATAAgAEgAQQBTAEgARwBSAEEAUABIACAAVABPAE8ATAAgAFQATwAgAEgARQBMAFAAIABCAEwATwBDAEsAQwBIAEEASQBOACAAVABFAEMASABOAE8ATABPAEcAWQAKAAoAUwBPAEwATwAgAD0AIAAgAGkAcwAgAGEAIABkAGUAYwBlAG4AdAByAGEAbABpAHoAZQBkACAAZQBjAG8AcwB5AHMAdABlAG0AIABiAHUAaQBsAHQAIABvAG4AIAB0AGgAZQAgAFgAUgBQACAATABlAGQAZwBlAHIAIAB0AGgAYQB0ACAAYQBpAG0AcwAgAHQAbwAgAGYAYQBjAGkAbABpAHQAYQB0AGUAIAB0AGgAZQAgAHQAbwBrAGUAbgBpAHoAYQB0AGkAbwBuACAAbwBmACAAYQBzAHMAZQB0AHMALAAgAGkAbgBjAGwAdQBkAGkAbgBnACAAcwB0AG8AYwBrAHMALAAgAEUAVABGAHMALAAgAGEAbgBkACAAYwBvAG0AbQBvAGQAaQB0AGkAZQBzAC4ACgAtAC0ALQAtAAoAWABQAFIAIAA9ACAAaQBzACAAdABvACAAYwByAGUAYQB0AGUAIABhACAAZABlAGMAZQBuAHQAcgBhAGwAaQB6AGUAZAAgAGEAbgBkACAAaQBuAHQAZQByAG8AcABlAHIAYQBiAGwAZQAgAHAAbABhAHQAZgBvAHIAbQAgAGYAbwByACAAbQBhAG4AYQBnAGkAbgBnACAAZABpAGcAaQB0AGEAbAAgAGkAZABlAG4AdABpAHQAaQBlAHMAIABhAG4AZAAgAGYAaQBuAGEAbgBjAGkAYQBsACAAcwBlAHIAdgBpAGMAZQBzAAoACgAgAE0ASQBPAFQAQQAgAD0AIABkAGUAYwBlAG4AdAByAGEAbABpAHoAZQBkACAAcABsAGEAdABmAG8AcgBtACAAZgBvAHIAIAB0AGgAZQAgAEkAbgB0AGUAcgBuAGUAdAAgAG8AZgAgAFQAaABpAG4AZwBzACAAKABJAG8AVAApAAoALQAtAC0ALQAKAEEATABHAE8AIAA9ACAAcwB1AHAAcABvAHIAdABzACAAdABoAGUAIABjAHIAZQBhAHQAaQBvAG4AIABhAG4AZAAgAGUAeABlAGMAdQB0AGkAbwBuACAAbwBmACAAcwBtAGEAcgB0ACAAYwBvAG4AdAByAGEAYwB0AHMALAAgAHcAaABpAGMAaAAgAGUAbgBhAGIAbABlACAAdABoAGUAIABkAGUAdgBlAGwAbwBwAG0AZQBuAHQAIABvAGYAIABkAGUAYwBlAG4AdAByAGEAbABpAHoAZQBkACAAYQBwAHAAbABpAGMAYQB0AGkAbwBuAHMAIAAoAGQAQQBwAHAAcwApACAAZgBvAHIAIAB2AGEAcgBpAG8AdQBzACAAZgBpAG4AYQBuAGMAaQBhAGwAIABzAGUAcgB2AGkAYwBlAHMALAAgAGkAbgBjAGwAdQBkAGkAbgBnACAAbABlAG4AZABpAG4AZwAsACAAYgBvAHIAcgBvAHcAaQBuAGcALAAgAGEAbgBkACAAdAByAGEAZABpAG4AZwAuAAoACgB0AGgAZQBuACAAaQBtAGEAIABzAHQAbwBwACAAaABlAHIAZQAgAHQAbwBvACAAbABhAHoAeQAgAHQAbwAgAHcAcgBpAHQAZQAgAHQAaABlACAAcgBlAHMAdAAgAGwAbwBsAAoALQAtAC0ALQAKAC0ALQAtAC0ACgAtAC0ALQAtAAoALQAtAC0ALQAKAGAAYABgAAoACgAKAAoA
+                                    [CATEGORY] => CRIPTOS
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 113
+                                            [TITLE] => CUARTO--CDS--Quitar el polvo de los archivadores de CDS y meterlos bajo mi colchón en bolsas cerradas con plástico (TERMINAR)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => ROCK
+                                            [CREATEDBY] => usuario
+                                            [ICONINDEX] => 43
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [FLAG] => 1
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 75
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.34542824
+                                            [CREATIONDATESTRING] => 24/05/2024 8:17
+                                            [LASTMOD] => 45569.88319444
+                                            [LASTMODSTRING] => 04/10/2024 21:11
+                                            [LASTMODBY] => usuario
+                                            [POS] => 8
+                                            [POSSTRING] => 1.9
+                                            [CALCPERCENTDONE] => 75
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => - ✅ Limpieza con el aspirador
+- ⬜ Limpieza manual con trapos y limpia-cristales
+- ⬜ Analizar los CDS y separar lo personal de los contenidos (MP3, PELIS, CATEGORIAS, ETC)
+                                    [CUSTOMCOMMENTS] => YABgAGAACgAtACAABScgAEwAaQBtAHAAaQBlAHoAYQAgAGMAbwBuACAAZQBsACAAYQBzAHAAaQByAGEAZABvAHIACgAtACAAHCsgAEwAaQBtAHAAaQBlAHoAYQAgAG0AYQBuAHUAYQBsACAAYwBvAG4AIAB0AHIAYQBwAG8AcwAgAHkAIABsAGkAbQBwAGkAYQAtAGMAcgBpAHMAdABhAGwAZQBzAAoALQAgABwrIABBAG4AYQBsAGkAegBhAHIAIABsAG8AcwAgAEMARABTACAAeQAgAHMAZQBwAGEAcgBhAHIAIABsAG8AIABwAGUAcgBzAG8AbgBhAGwAIABkAGUAIABsAG8AcwAgAGMAbwBuAHQAZQBuAGkAZABvAHMAIAAoAE0AUAAzACwAIABQAEUATABJAFMALAAgAEMAQQBUAEUARwBPAFIASQBBAFMALAAgAEUAVABDACkACgBgAGAAYAAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 110
+                                            [TITLE] => CUARTO--DUDA--Duda de si comprar la estanteria metalica blanca para poner cachibaches
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => ROCK
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 95
+                                            [STARTDATE] => 45428.00000000
+                                            [STARTDATESTRING] => 16/05/2024
+                                            [CREATIONDATE] => 45428.49532407
+                                            [CREATIONDATESTRING] => 16/05/2024 11:53
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 9
+                                            [POSSTRING] => 1.10
+                                            [CALCPERCENTDONE] => 95
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => PENSAR--Se podria hacer todo el lateral entero no solo el metro que separa mesa de ordenador
+PENSAR--Y hacer toda la L para poder tener tb cosas encima de la mesa del PC?
+                                    [CUSTOMCOMMENTS] => YABgAGAACgBQAEUATgBTAEEAUgAtAC0AUwBlACAAcABvAGQAcgBpAGEAIABoAGEAYwBlAHIAIAB0AG8AZABvACAAZQBsACAAbABhAHQAZQByAGEAbAAgAGUAbgB0AGUAcgBvACAAbgBvACAAcwBvAGwAbwAgAGUAbAAgAG0AZQB0AHIAbwAgAHEAdQBlACAAcwBlAHAAYQByAGEAIABtAGUAcwBhACAAZABlACAAbwByAGQAZQBuAGEAZABvAHIACgBQAEUATgBTAEEAUgAtAC0AWQAgAGgAYQBjAGUAcgAgAHQAbwBkAGEAIABsAGEAIABMACAAcABhAHIAYQAgAHAAbwBkAGUAcgAgAHQAZQBuAGUAcgAgAHQAYgAgAGMAbwBzAGEAcwAgAGUAbgBjAGkAbQBhACAAZABlACAAbABhACAAbQBlAHMAYQAgAGQAZQBsACAAUABDAD8ACgBgAGAAYAAKAAoACgAAAAAA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 121
+                                            [TITLE] => CUARTO--IKEA--Comprar estanteria de madera BILLY para esquina del cuarto de ordenadores (APLAZADO)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => SOMEDAY
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.56388889
+                                            [CREATIONDATESTRING] => 24/05/2024 13:32
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 10
+                                            [POSSTRING] => 1.11
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => BILLY - LIBRERÍA, EFECTO ROBLE, 40X28X202 CM = 54,99€
+❤️ Estantería que entra en la esquina del cuarto de ordenadores junto a la ventana.
+
+Las medias que he apuntado son 48 x 30 aprox.
+
+54,99€ la de color madera
+44.99 la de color blanco
+Coste de envió a domicilio 19.90 eu = 74,8 con IVA
+
+Coste de recoger en Eroski = 5 eu
+
+https://www.ikea.com/es/es/p/billy-libreria-efecto-roble-60477382/
+Embalaje
+
+BILLY
+Librería
+Número de artículo
+604.773.82
+Ancho: 39 cm
+Alto: 7 cm
+Largo: 207 cm
+Peso: 26.92 kg
+Paquete(s): 1
+BILLY / OXBE
+                                    [CUSTOMCOMMENTS] => YABgAGAACgBCAEkATABMAFkAIAAtACAATABJAEIAUgBFAFIAzQBBACwAIABFAEYARQBDAFQATwAgAFIATwBCAEwARQAsACAANAAwAFgAMgA4AFgAMgAwADIAIABDAE0AIAA9ACAANQA0ACwAOQA5AKwgCgBkJw/+IABFAHMAdABhAG4AdABlAHIA7QBhACAAcQB1AGUAIABlAG4AdAByAGEAIABlAG4AIABsAGEAIABlAHMAcQB1AGkAbgBhACAAZABlAGwAIABjAHUAYQByAHQAbwAgAGQAZQAgAG8AcgBkAGUAbgBhAGQAbwByAGUAcwAgAGoAdQBuAHQAbwAgAGEAIABsAGEAIAB2AGUAbgB0AGEAbgBhAC4ACgAKAEwAYQBzACAAbQBlAGQAaQBhAHMAIABxAHUAZQAgAGgAZQAgAGEAcAB1AG4AdABhAGQAbwAgAHMAbwBuACAANAA4ACAAeAAgADMAMAAgAGEAcAByAG8AeAAuAAoACgA1ADQALAA5ADkArCAgAGwAYQAgAGQAZQAgAGMAbwBsAG8AcgAgAG0AYQBkAGUAcgBhAAoANAA0AC4AOQA5ACAAbABhACAAZABlACAAYwBvAGwAbwByACAAYgBsAGEAbgBjAG8ACgBDAG8AcwB0AGUAIABkAGUAIABlAG4AdgBpAPMAIABhACAAZABvAG0AaQBjAGkAbABpAG8AIAAxADkALgA5ADAAIABlAHUAIAA9ACAANwA0ACwAOAAgAGMAbwBuACAASQBWAEEACgAKAEMAbwBzAHQAZQAgAGQAZQAgAHIAZQBjAG8AZwBlAHIAIABlAG4AIABFAHIAbwBzAGsAaQAgAD0AIAA1ACAAZQB1AAoACgBoAHQAdABwAHMAOgAvAC8AdwB3AHcALgBpAGsAZQBhAC4AYwBvAG0ALwBlAHMALwBlAHMALwBwAC8AYgBpAGwAbAB5AC0AbABpAGIAcgBlAHIAaQBhAC0AZQBmAGUAYwB0AG8ALQByAG8AYgBsAGUALQA2ADAANAA3ADcAMwA4ADIALwAKAEUAbQBiAGEAbABhAGoAZQAKAAoAQgBJAEwATABZAAoATABpAGIAcgBlAHIA7QBhAAoATgD6AG0AZQByAG8AIABkAGUAIABhAHIAdADtAGMAdQBsAG8ACgA2ADAANAAuADcANwAzAC4AOAAyAAoAQQBuAGMAaABvADoAIAAzADkAIABjAG0ACgBBAGwAdABvADoAIAA3ACAAYwBtAAoATABhAHIAZwBvADoAIAAyADAANwAgAGMAbQAKAFAAZQBzAG8AOgAgADIANgAuADkAMgAgAGsAZwAKAFAAYQBxAHUAZQB0AGUAKABzACkAOgAgADEACgBCAEkATABMAFkAIAAvACAATwBYAEIARQAKAGAAYABgAAoACgAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 136
+                                            [TITLE] => CUARTO--MESA--ORDEN--Quitar los 2 discos duros que tengo parados
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.39237269
+                                            [CREATIONDATESTRING] => 01/07/2024 9:25
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 11
+                                            [POSSTRING] => 1.12
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 130
+                                            [TITLE] => CUARTO--ORDEN--Comprar la estanteria de metal blanca para mis tarros? (180eu aprox)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45470.00000000
+                                            [STARTDATESTRING] => 27/06/2024
+                                            [CREATIONDATE] => 45470.55791667
+                                            [CREATIONDATESTRING] => 27/06/2024 13:23
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 12
+                                            [POSSTRING] => 1.13
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 199
+                                            [TITLE] => CUARTO--Quitar los CDS y probar si se puede dejar el ordenador al lado de la mesa cerrado definitivamente y poder poner 3 monitores en la mesa
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45564.00000000
+                                            [STARTDATESTRING] => 29/09/2024
+                                            [CREATIONDATE] => 45564.60778935
+                                            [CREATIONDATESTRING] => 29/09/2024 14:35
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 13
+                                            [POSSTRING] => 1.14
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 137
+                                            [TITLE] => CUARTO--VOLANTE--LOGITECH--Meterlo en caja y al trastero
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.40089120
+                                            [CREATIONDATESTRING] => 01/07/2024 9:37
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 14
+                                            [POSSTRING] => 1.15
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [15] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 107
+                                            [TITLE] => JAN--Probar en el 2697V4 con memorias DDR4 más rápidas y la RTX3060 a ver si sale aviso de lentitud de memoria (SOMEDAY)(MAYBE)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => SOMEDAY
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45428.00000000
+                                            [STARTDATESTRING] => 16/05/2024
+                                            [CREATIONDATE] => 45428.49407407
+                                            [CREATIONDATESTRING] => 16/05/2024 11:51
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 15
+                                            [POSSTRING] => 1.16
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => JAN
+                                )
+
+                            [16] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 131
+                                            [TITLE] => PASILLO--ORDEN--Limpiar trastos del pasillo. Porta fotos de tata + carrito blanco con ruedas
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.30348083
+                                            [TIMESPENTUNITS] => H
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45250.00000000
+                                            [STARTDATESTRING] => 20/11/2023
+                                            [CREATIONDATE] => 45470.56105324
+                                            [CREATIONDATESTRING] => 27/06/2024 13:27
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 16
+                                            [POSSTRING] => 1.17
+                                            [CALCTIMESPENT] => 0.30348083
+                                            [CALCTIMESPENTUNITS] => H
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => PASILLO
+                                    [METADATA] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [__selected__] => 1
+                                                )
+
+                                        )
+
+                                )
+
+                            [17] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 132
+                                            [TITLE] => PASILLO--Pensar que hacer con las 2 cajas de CDROM virgenes - BAJADAS AL TRASTERO
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => SOMEDAY
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.38927083
+                                            [CREATIONDATESTRING] => 01/07/2024 9:20
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 17
+                                            [POSSTRING] => 1.18
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => PASILLO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => PASILLO
+                                                    [VALUEDISPLAY] => PASILLO
+                                                )
+
+                                        )
+
+                                )
+
+                            [18] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 197
+                                            [TITLE] => SALON--Quitar la TV para que Marta pueda hacer yoga
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45564.00000000
+                                            [STARTDATESTRING] => 29/09/2024
+                                            [CREATIONDATE] => 45564.44067130
+                                            [CREATIONDATESTRING] => 29/09/2024 10:34
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 18
+                                            [POSSTRING] => 1.19
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SALON
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => SALON
+                                                    [VALUEDISPLAY] => SALON
+                                                )
+
+                                        )
+
+                                )
+
+                            [19] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 182
+                                            [TITLE] => SALON--TV--Vender la TV Samsung de Marta?
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.43716435
+                                            [CREATIONDATESTRING] => 01/07/2024 10:29
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 19
+                                            [POSSTRING] => 1.20
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SALON
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => SALON
+                                                    [VALUEDISPLAY] => SALON
+                                                )
+
+                                        )
+
+                                )
+
+                            [20] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 138
+                                            [TITLE] => SERVIDOR--Evaluar si es posible montar un servidor mas potente y silencioso en casa 24-365
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => WAITING
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.40984954
+                                            [CREATIONDATESTRING] => 01/07/2024 9:50
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 20
+                                            [POSSTRING] => 1.21
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SERVIDOR
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [21] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 198
+                                            [TITLE] => SERVIDOR--Montar un servidor totalmente silencio aunque solo sea para SSD's
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [STATUS] => WISHLIST
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45564.00000000
+                                            [STARTDATESTRING] => 29/09/2024
+                                            [CREATIONDATE] => 45564.57253472
+                                            [CREATIONDATESTRING] => 29/09/2024 13:44
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 21
+                                            [POSSTRING] => 1.22
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SERVIDOR
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [22] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 135
+                                            [TITLE] => TODOLIST--PENSAR--Merece la pena seguir usandolo si voy a migrar a LINUX?
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [DUEDATE] => 45570.00000000
+                                            [DUEDATESTRING] => 05/10/2024
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.39086806
+                                            [CREATIONDATESTRING] => 01/07/2024 9:22
+                                            [LASTMOD] => 45569.88158565
+                                            [LASTMODSTRING] => 04/10/2024 21:09
+                                            [LASTMODBY] => usuario
+                                            [POS] => 22
+                                            [POSSTRING] => 1.23
+                                            [CALCTIMEREMAINING] => -0.40114583
+                                            [CALCTIMEREMAININGUNITS] => D
+                                            [TEXTCOLOR] => 100
+                                            [TEXTWEBCOLOR] => #640000
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => TODOLIST
+                                )
+
+                            [23] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 116
+                                            [TITLE] => TRASTERO--Tirar cajas vacías que no se vayan a usar y ocupen mucho volumen en las estanterías
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.34542824
+                                            [CREATIONDATESTRING] => 24/05/2024 8:17
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 23
+                                            [POSSTRING] => 1.24
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => TRASTERO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => TRASTERO
+                                                    [VALUEDISPLAY] => TRASTERO
+                                                )
+
+                                        )
+
+                                )
+
+                            [24] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 134
+                                            [TITLE] => XEONS--DUDA--Cambiar el 2697 a la caja del 2690?
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [DUEDATE] => 45569.00000000
+                                            [DUEDATESTRING] => 04/10/2024
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.38962963
+                                            [CREATIONDATESTRING] => 01/07/2024 9:21
+                                            [LASTMOD] => 45569.85263889
+                                            [LASTMODSTRING] => 04/10/2024 20:27
+                                            [LASTMODBY] => usuario
+                                            [POS] => 24
+                                            [POSSTRING] => 1.25
+                                            [CALCTIMEREMAINING] => -1.40114583
+                                            [CALCTIMEREMAININGUNITS] => D
+                                            [TEXTCOLOR] => 100
+                                            [TEXTWEBCOLOR] => #640000
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => XEONS
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [25] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 188
+                                            [TITLE] => XEONS--Ideales para PROXMOX por tener 128GB y multiples nucleos
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45507.00000000
+                                            [STARTDATESTRING] => 03/08/2024
+                                            [CREATIONDATE] => 45507.46796296
+                                            [CREATIONDATESTRING] => 03/08/2024 11:13
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 25
+                                            [POSSTRING] => 1.26
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => XEONS
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [26] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 117
+                                            [TITLE] => XEONS--Que hacer con el Xeon V2 con esa caja tan enorme? (Venderlo - Regalarlo - Desmontarlo)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.34542824
+                                            [CREATIONDATESTRING] => 24/05/2024 8:17
+                                            [LASTMOD] => 45569.84674769
+                                            [LASTMODSTRING] => 04/10/2024 20:19
+                                            [LASTMODBY] => usuario
+                                            [POS] => 26
+                                            [POSSTRING] => 1.27
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => XEONS
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [27] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 205
+                                            [TITLE] => TODOLIST---Preguntar en el foro por las tablas necesarias para lo del MySQL
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [DONEDATE] => 45569.85362269
+                                            [DONEDATESTRING] => 04/10/2024 20:29
+                                            [PERCENTDONE] => 100
+                                            [STARTDATE] => 45569.00000000
+                                            [STARTDATESTRING] => 04/10/2024
+                                            [CREATIONDATE] => 45569.85326389
+                                            [CREATIONDATESTRING] => 04/10/2024 20:28
+                                            [LASTMOD] => 45569.85362269
+                                            [LASTMODSTRING] => 04/10/2024 20:29
+                                            [LASTMODBY] => usuario
+                                            [POS] => 27
+                                            [POSSTRING] => 1.28
+                                            [CALCPERCENTDONE] => 100
+                                            [TEXTCOLOR] => 4276287
+                                            [TEXTWEBCOLOR] => #3F4041
+                                            [PRIORITYCOLOR] => 57630
+                                            [PRIORITYWEBCOLOR] => #1EE100
+                                            [GOODASDONE] => 1
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 202
+                            [TITLE] => 2024-11-00
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45569.00000000
+                            [STARTDATESTRING] => 04/10/2024
+                            [CREATIONDATE] => 45569.82423611
+                            [CREATIONDATESTRING] => 04/10/2024 19:46
+                            [LASTMOD] => 45569.88393519
+                            [LASTMODSTRING] => 04/10/2024 21:12
+                            [LASTMODBY] => usuario
+                            [POS] => 1
+                            [POSSTRING] => 2
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                        )
+
+                )
+
+            [2] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 203
+                            [TITLE] => 2024-12-00
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45569.00000000
+                            [STARTDATESTRING] => 04/10/2024
+                            [CREATIONDATE] => 45569.82427083
+                            [CREATIONDATESTRING] => 04/10/2024 19:46
+                            [LASTMOD] => 45569.88393519
+                            [LASTMODSTRING] => 04/10/2024 21:12
+                            [LASTMODBY] => usuario
+                            [POS] => 2
+                            [POSSTRING] => 3
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                        )
+
+                )
+
+            [3] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 194
+                            [TITLE] => 2024-10-00--OBJETIVOS--
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [STATUS] => NEXT
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45564.00000000
+                            [STARTDATESTRING] => 29/09/2024
+                            [CREATIONDATE] => 45564.42401620
+                            [CREATIONDATESTRING] => 29/09/2024 10:10
+                            [LASTMOD] => 45569.90001157
+                            [LASTMODSTRING] => 04/10/2024 21:36
+                            [LASTMODBY] => usuario
+                            [COLOR] => 8421631
+                            [WEBCOLOR] => #FF8080
+                            [POS] => 3
+                            [POSSTRING] => 4
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                        )
+
+                    [COMMENTS] => **2024-10**
+
+- [_] JAVASCRIPT--
+- [_] CSHARP--
+- [_] SEO--
+- [_] VISUAL STUDIO 2022--
+- [_] SQL SERVER--
+- [x] CLAUDE--
+- [_] CLAUDE-DEV--
+                    [CUSTOMCOMMENTS] => YABgAGAACgAqACoAMgAwADIANAAtADEAMAAqACoACgAKAC0AIABbAF8AXQAgAEoAQQBWAEEAUwBDAFIASQBQAFQALQAtAAoALQAgAFsAXwBdACAAQwBTAEgAQQBSAFAALQAtAAoALQAgAFsAXwBdACAAUwBFAE8ALQAtAAoALQAgAFsAXwBdACAAVgBJAFMAVQBBAEwAIABTAFQAVQBEAEkATwAgADIAMAAyADIALQAtAAoALQAgAFsAXwBdACAAUwBRAEwAIABTAEUAUgBWAEUAUgAtAC0ACgAtACAAWwB4AF0AIABDAEwAQQBVAEQARQAtAC0ACgAtACAAWwBfAF0AIABDAEwAQQBVAEQARQAtAEQARQBWAC0ALQAKAGAAYABgAAoACgAKAAoACgAKAAoA
+                    [CATEGORY] => OBJETIVOS
+                )
+
+        )
+
+    [CATEGORY] => Array
+        (
+            [0] => ALMACEN
+            [1] => CLICKUP
+            [2] => CLUSTER
+            [3] => CRIPTOS
+            [4] => CUARTO
+            [5] => JAN
+            [6] => OBJETIVOS
+            [7] => PASILLO
+            [8] => SALON
+            [9] => SERVIDOR
+            [10] => SOMEDAY
+            [11] => TODOLIST
+            [12] => TRASTERO
+            [13] => XEONS
+        )
+
+    [TAG] => Array
+        (
+            [0] => claves
+            [1] => imagenes
+            [2] => js
+        )
+
+    [STATUS] => Array
+        (
+            [0] => BACKLOG
+            [1] => FINISHED
+            [2] => NEXT
+            [3] => ROCK
+            [4] => SOMEDAY
+            [5] => TO-DO
+            [6] => WAITING
+            [7] => WIP
+            [8] => WISHLIST
+            [9] => ZZZFINISHED
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 201
+            [TITLE] => 2024-10-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82340278
+            [CREATIONDATESTRING] => 04/10/2024 19:45
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 0
+            [POSSTRING] => 1
+            [CALCPERCENTDONE] => 13
+            [CALCTIMEESTIMATE] => 30.00000000
+            [CALCTIMEESTUNITS] => I
+            [CALCTIMESPENT] => 18.20884980
+            [CALCTIMESPENTUNITS] => I
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+            [SUBTASKDONE] => 2/28
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 201
+            [TITLE] => 2024-10-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82340278
+            [CREATIONDATESTRING] => 04/10/2024 19:45
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 0
+            [POSSTRING] => 1
+            [CALCPERCENTDONE] => 13
+            [CALCTIMEESTIMATE] => 30.00000000
+            [CALCTIMEESTUNITS] => I
+            [CALCTIMESPENT] => 18.20884980
+            [CALCTIMESPENTUNITS] => I
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+            [SUBTASKDONE] => 2/28
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 202
+            [TITLE] => 2024-11-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82423611
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 1
+            [POSSTRING] => 2
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 202
+            [TITLE] => 2024-11-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82423611
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 1
+            [POSSTRING] => 2
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 203
+            [TITLE] => 2024-12-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82427083
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 2
+            [POSSTRING] => 3
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 203
+            [TITLE] => 2024-12-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82427083
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 2
+            [POSSTRING] => 3
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 194
+            [TITLE] => 2024-10-00--OBJETIVOS--
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [STATUS] => NEXT
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45564.00000000
+            [STARTDATESTRING] => 29/09/2024
+            [CREATIONDATE] => 45564.42401620
+            [CREATIONDATESTRING] => 29/09/2024 10:10
+            [LASTMOD] => 45569.90001157
+            [LASTMODSTRING] => 04/10/2024 21:36
+            [LASTMODBY] => usuario
+            [COLOR] => 8421631
+            [WEBCOLOR] => #FF8080
+            [POS] => 3
+            [POSSTRING] => 4
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 194
+            [TITLE] => 2024-10-00--OBJETIVOS--
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [STATUS] => NEXT
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45564.00000000
+            [STARTDATESTRING] => 29/09/2024
+            [CREATIONDATE] => 45564.42401620
+            [CREATIONDATESTRING] => 29/09/2024 10:10
+            [LASTMOD] => 45569.90001157
+            [LASTMODSTRING] => 04/10/2024 21:36
+            [LASTMODBY] => usuario
+            [COLOR] => 8421631
+            [WEBCOLOR] => #FF8080
+            [POS] => 3
+            [POSSTRING] => 4
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Successfully processed file: todolist.tdl. Tasks inserted: 0
+
+C:\xampp\htdocs>php index.php todolist.tdl >> 1050.log
+File size: 66980 bytes
+First 100 characters: fffe3c003f0078006d006c002000760065007200730069006f006e003d00220031002e0030002200200065006e0063006f00640069006e0067003d0022007500740066002d003100360022003f003e000d000a003c0054004f0044004f004c0049005300
+Successfully parsed XML with encoding: UTF-8
+XML structure: SimpleXMLElement Object
+(
+    [@attributes] => Array
+        (
+            [PROJECTNAME] => 2024
+            [EARLIESTDUEDATE] => 45569.99998843
+            [LASTMOD] => 45571.40107639
+            [LASTMODSTRING] => 06/10/2024 9:37
+            [FILENAME] => 2024.tdl
+            [NEXTUNIQUEID] => 206
+            [FILEVERSION] => 1102
+            [APPVER] => 8.999.998.7
+            [FILEFORMAT] => 12
+        )
+
+    [CUSTOMATTRIBDEF] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => CUST_PRECIO
+                            [LABEL] => Precio
+                            [COLTITLE] =>
+                            [TYPE] => 3
+                            [COLALIGN] => 2
+                            [FEATURES] => 1
+                            [ENABLED] => 1
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => CUST_LUGAR
+                            [LABEL] => Lugar
+                            [COLTITLE] =>
+                            [TYPE] => 0
+                            [COLALIGN] => 0
+                            [FEATURES] => 1
+                            [ENABLED] => 1
+                        )
+
+                )
+
+        )
+
+    [TASK] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 201
+                            [TITLE] => 2024-10-00
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45569.00000000
+                            [STARTDATESTRING] => 04/10/2024
+                            [CREATIONDATE] => 45569.82340278
+                            [CREATIONDATESTRING] => 04/10/2024 19:45
+                            [LASTMOD] => 45569.88393519
+                            [LASTMODSTRING] => 04/10/2024 21:12
+                            [LASTMODBY] => usuario
+                            [POS] => 0
+                            [POSSTRING] => 1
+                            [CALCPERCENTDONE] => 13
+                            [CALCTIMEESTIMATE] => 30.00000000
+                            [CALCTIMEESTUNITS] => I
+                            [CALCTIMESPENT] => 18.20884980
+                            [CALCTIMESPENTUNITS] => I
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                            [SUBTASKDONE] => 2/28
+                        )
+
+                    [TASK] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 123
+                                            [TITLE] => ALMACEN--IDEA--Idea de usar un maletin con 20 disco duros SATA de 4 6 y 8 TB (100eu)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 30.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45445.00000000
+                                            [STARTDATESTRING] => 02/06/2024
+                                            [CREATIONDATE] => 45445.40630787
+                                            [CREATIONDATESTRING] => 02/06/2024 9:45
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 0
+                                            [POSSTRING] => 1.1
+                                            [CALCTIMEESTIMATE] => 30.00000000
+                                            [CALCTIMEESTUNITS] => I
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => - [_] PROBAR--Que tal es meter disco duros de LINUX en DEBIAN12. Automount?
+- [x] ICYDOCK--Comprados un total de 5 extraibles para MIPC (4 HDS)
+                                    [CUSTOMCOMMENTS] => YABgAGAACgAtACAAWwBfAF0AIABQAFIATwBCAEEAUgAtAC0AUQB1AGUAIAB0AGEAbAAgAGUAcwAgAG0AZQB0AGUAcgAgAGQAaQBzAGMAbwAgAGQAdQByAG8AcwAgAGQAZQAgAEwASQBOAFUAWAAgAGUAbgAgAEQARQBCAEkAQQBOADEAMgAuACAAQQB1AHQAbwBtAG8AdQBuAHQAPwAKAC0AIABbAHgAXQAgAEkAQwBZAEQATwBDAEsALQAtAEMAbwBtAHAAcgBhAGQAbwBzACAAdQBuACAAdABvAHQAYQBsACAAZABlACAANQAgAGUAeAB0AHIAYQBpAGIAbABlAHMAIABwAGEAcgBhACAATQBJAFAAQwAgACgANAAgAEgARABTACkACgBgAGAAYAAKAAoACgAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 204
+                                            [TITLE] => TODOLIST---Probar a leer y escribir en MySQL
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [DONEDATE] => 45569.85292824
+                                            [DONEDATESTRING] => 04/10/2024 20:28
+                                            [PERCENTDONE] => 100
+                                            [STARTDATE] => 45569.00000000
+                                            [STARTDATESTRING] => 04/10/2024
+                                            [CREATIONDATE] => 45569.85275463
+                                            [CREATIONDATESTRING] => 04/10/2024 20:27
+                                            [LASTMOD] => 45569.85292824
+                                            [LASTMODSTRING] => 04/10/2024 20:28
+                                            [LASTMODBY] => usuario
+                                            [POS] => 1
+                                            [POSSTRING] => 1.2
+                                            [CALCPERCENTDONE] => 100
+                                            [TEXTCOLOR] => 4276287
+                                            [TEXTWEBCOLOR] => #3F4041
+                                            [PRIORITYCOLOR] => 57630
+                                            [PRIORITYWEBCOLOR] => #1EE100
+                                            [GOODASDONE] => 1
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 186
+                                            [TITLE] => ALMACEN--IDEA--Separar los disco duros en las tres caja SILVERCHAIR ARMOR con X79
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45488.00000000
+                                            [STARTDATESTRING] => 15/07/2024
+                                            [CREATIONDATE] => 45488.90976852
+                                            [CREATIONDATESTRING] => 15/07/2024 21:50
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 2
+                                            [POSSTRING] => 1.3
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => - PRO--El servidor XEON 2670 de 64GB - Tiene una placa X79G--14 disco duros
+- PRO--Espacio de sobra para poner al menos 6 por caja
+- CONTRAS--Consumo y ruido
+- CONTRAS--No sirven para OLLAMA
+                                    [CUSTOMCOMMENTS] => YABgAGAACgAtACAAUABSAE8ALQAtAEUAbAAgAHMAZQByAHYAaQBkAG8AcgAgAFgARQBPAE4AIAAyADYANwAwACAAZABlACAANgA0AEcAQgAgAC0AIABUAGkAZQBuAGUAIAB1AG4AYQAgAHAAbABhAGMAYQAgAFgANwA5AEcALQAtADEANAAgAGQAaQBzAGMAbwAgAGQAdQByAG8AcwAKAC0AIABQAFIATwAtAC0ARQBzAHAAYQBjAGkAbwAgAGQAZQAgAHMAbwBiAHIAYQAgAHAAYQByAGEAIABwAG8AbgBlAHIAIABhAGwAIABtAGUAbgBvAHMAIAA2ACAAcABvAHIAIABjAGEAagBhAAoALQAgAEMATwBOAFQAUgBBAFMALQAtAEMAbwBuAHMAdQBtAG8AIAB5ACAAcgB1AGkAZABvAAoALQAgAEMATwBOAFQAUgBBAFMALQAtAE4AbwAgAHMAaQByAHYAZQBuACAAcABhAHIAYQAgAE8ATABMAEEATQBBAAoAYABgAGAACgAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 200
+                                            [TITLE] => CAMA---Limpiar la parte de abajo que tiene muchas pelusas
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45569.00000000
+                                            [STARTDATESTRING] => 04/10/2024
+                                            [CREATIONDATE] => 45569.79265046
+                                            [CREATIONDATESTRING] => 04/10/2024 19:01
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 3
+                                            [POSSTRING] => 1.4
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 187
+                                            [TITLE] => CLICKUP--Decidir si me paso al CLICKUP o sigo en TODOLIST o WIKI
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [FLAG] => 1
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45507.00000000
+                                            [STARTDATESTRING] => 03/08/2024
+                                            [CREATIONDATE] => 45507.46747685
+                                            [CREATIONDATESTRING] => 03/08/2024 11:13
+                                            [LASTMOD] => 45569.88466435
+                                            [LASTMODSTRING] => 04/10/2024 21:13
+                                            [LASTMODBY] => usuario
+                                            [POS] => 4
+                                            [POSSTRING] => 1.5
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => DUDA--Es mejor CLICKUP que TODOLIST?
+PORTABILIDAD--Es mejor CLICKUP para usar en LINUX
+ITINERANCIA--Es mejor CLICKUP para viajar
+VELOCIDAD--Ambos me resulan lentos
+                                    [CUSTOMCOMMENTS] => LQAgAEQAVQBEAEEALQAtAEUAcwAgAG0AZQBqAG8AcgAgAEMATABJAEMASwBVAFAAIABxAHUAZQAgAFQATwBEAE8ATABJAFMAVAA/AAoALQAgAFAATwBSAFQAQQBCAEkATABJAEQAQQBEAC0ALQBFAHMAIABtAGUAagBvAHIAIABDAEwASQBDAEsAVQBQACAAcABhAHIAYQAgAHUAcwBhAHIAIABlAG4AIABMAEkATgBVAFgACgAtACAASQBUAEkATgBFAFIAQQBOAEMASQBBAC0ALQBFAHMAIABtAGUAagBvAHIAIABDAEwASQBDAEsAVQBQACAAcABhAHIAYQAgAHYAaQBhAGoAYQByAAoALQAgAFYARQBMAE8AQwBJAEQAQQBEAC0ALQBBAG0AYgBvAHMAIABtAGUAIAByAGUAcwB1AGwAYQBuACAAbABlAG4AdABvAHMACgAKAAoA
+                                    [CATEGORY] => CLICKUP
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 125
+                                            [TITLE] => CLUSTER--RYZEN--Que hacer con los 3 ordenadores del cluster de RYZENS 2200G - PENDIENTES de nueva version proxmox
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45447.00000000
+                                            [STARTDATESTRING] => 04/06/2024
+                                            [CREATIONDATE] => 45447.50768519
+                                            [CREATIONDATESTRING] => 04/06/2024 12:11
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 5
+                                            [POSSTRING] => 1.6
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CLUSTER
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 181
+                                            [TITLE] => CLUSTER--RYZEN--Subirlos encima de la mesa de madera de IKEA 15eu con el monitor pequeño encima
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.43716435
+                                            [CREATIONDATESTRING] => 01/07/2024 10:29
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 6
+                                            [POSSTRING] => 1.7
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CLUSTER
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 127
+                                            [TITLE] => CRIPTOS--Listado de Criptos a evaluar en 2024
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45447.00000000
+                                            [STARTDATESTRING] => 04/06/2024
+                                            [CREATIONDATE] => 45447.51155093
+                                            [CREATIONDATESTRING] => 04/06/2024 12:16
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 7
+                                            [POSSTRING] => 1.8
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => https://x.com/NeetrihtrM/status/1758542171550994923
+
+Mr13|Project Seraphim.XRP   ‍☠️
+@NeetrihtrM
+
+BTC = NEW GOLD in digital form or something better than gold
+XRP= VEHICLE FOR BANKS TO SEND VALUES LIKE BTC OR GOLD THEY BEEN HOARDING FOR YEARS
+XLM = ANOTHER FRANCTION OF MONEY THAT WILL WATCH ALL CURRENCY IN ALL COUNTRIES
+SHX = NEW FORM OF US DOLLARS
+XDC = Hybrid CBP Finance
+----
+HBAR = POWERFUL HASHGRAPH TOOL TO HELP BLOCKCHAIN TECHNOLOGY
+
+SOLO =  is a decentralized ecosystem built on the XRP Ledger that aims to facilitate the tokenization of assets, including stocks, ETFs, and commodities.
+----
+XPR = is to create a decentralized and interoperable platform for managing digital identities and financial services
+
+ MIOTA = decentralized platform for the Internet of Things (IoT)
+----
+ALGO = supports the creation and execution of smart contracts, which enable the development of decentralized applications (dApps) for various financial services, including lending, borrowing, and trading.
+
+then ima stop here too lazy to write the rest lol
+----
+----
+----
+----
+                                    [CUSTOMCOMMENTS] => LQAgAGgAdAB0AHAAcwA6AC8ALwB4AC4AYwBvAG0ALwBOAGUAZQB0AHIAaQBoAHQAcgBNAC8AcwB0AGEAdAB1AHMALwAxADcANQA4ADUANAAyADEANwAxADUANQAwADkAOQA0ADkAMgAzAAoACgBgAGAAYAAKAAoATQByADEAMwB8AFAAcgBvAGoAZQBjAHQAIABTAGUAcgBhAHAAaABpAG0ALgBYAFIAUAAgADzY9N8NICAmD/4+2J3eCgBAAE4AZQBlAHQAcgBpAGgAdAByAE0ACgAKAEIAVABDACAAPQAgAE4ARQBXACAARwBPAEwARAAgAGkAbgAgAGQAaQBnAGkAdABhAGwAIABmAG8AcgBtACAAbwByACAAcwBvAG0AZQB0AGgAaQBuAGcAIABiAGUAdAB0AGUAcgAgAHQAaABhAG4AIABnAG8AbABkAAoAWABSAFAAPQAgAFYARQBIAEkAQwBMAEUAIABGAE8AUgAgAEIAQQBOAEsAUwAgAFQATwAgAFMARQBOAEQAIABWAEEATABVAEUAUwAgAEwASQBLAEUAIABCAFQAQwAgAE8AUgAgAEcATwBMAEQAIABUAEgARQBZACAAQgBFAEUATgAgAEgATwBBAFIARABJAE4ARwAgAEYATwBSACAAWQBFAEEAUgBTAAoAWABMAE0AIAA9ACAAQQBOAE8AVABIAEUAUgAgAEYAUgBBAE4AQwBUAEkATwBOACAATwBGACAATQBPAE4ARQBZACAAVABIAEEAVAAgAFcASQBMAEwAIABXAEEAVABDAEgAIABBAEwATAAgAEMAVQBSAFIARQBOAEMAWQAgAEkATgAgAEEATABMACAAQwBPAFUATgBUAFIASQBFAFMAIAAKAFMASABYACAAPQAgAE4ARQBXACAARgBPAFIATQAgAE8ARgAgAFUAUwAgAEQATwBMAEwAQQBSAFMACgBYAEQAQwAgAD0AIABIAHkAYgByAGkAZAAgAEMAQgBQACAARgBpAG4AYQBuAGMAZQAKAC0ALQAtAC0ACgBIAEIAQQBSACAAPQAgAFAATwBXAEUAUgBGAFUATAAgAEgAQQBTAEgARwBSAEEAUABIACAAVABPAE8ATAAgAFQATwAgAEgARQBMAFAAIABCAEwATwBDAEsAQwBIAEEASQBOACAAVABFAEMASABOAE8ATABPAEcAWQAKAAoAUwBPAEwATwAgAD0AIAAgAGkAcwAgAGEAIABkAGUAYwBlAG4AdAByAGEAbABpAHoAZQBkACAAZQBjAG8AcwB5AHMAdABlAG0AIABiAHUAaQBsAHQAIABvAG4AIAB0AGgAZQAgAFgAUgBQACAATABlAGQAZwBlAHIAIAB0AGgAYQB0ACAAYQBpAG0AcwAgAHQAbwAgAGYAYQBjAGkAbABpAHQAYQB0AGUAIAB0AGgAZQAgAHQAbwBrAGUAbgBpAHoAYQB0AGkAbwBuACAAbwBmACAAYQBzAHMAZQB0AHMALAAgAGkAbgBjAGwAdQBkAGkAbgBnACAAcwB0AG8AYwBrAHMALAAgAEUAVABGAHMALAAgAGEAbgBkACAAYwBvAG0AbQBvAGQAaQB0AGkAZQBzAC4ACgAtAC0ALQAtAAoAWABQAFIAIAA9ACAAaQBzACAAdABvACAAYwByAGUAYQB0AGUAIABhACAAZABlAGMAZQBuAHQAcgBhAGwAaQB6AGUAZAAgAGEAbgBkACAAaQBuAHQAZQByAG8AcABlAHIAYQBiAGwAZQAgAHAAbABhAHQAZgBvAHIAbQAgAGYAbwByACAAbQBhAG4AYQBnAGkAbgBnACAAZABpAGcAaQB0AGEAbAAgAGkAZABlAG4AdABpAHQAaQBlAHMAIABhAG4AZAAgAGYAaQBuAGEAbgBjAGkAYQBsACAAcwBlAHIAdgBpAGMAZQBzAAoACgAgAE0ASQBPAFQAQQAgAD0AIABkAGUAYwBlAG4AdAByAGEAbABpAHoAZQBkACAAcABsAGEAdABmAG8AcgBtACAAZgBvAHIAIAB0AGgAZQAgAEkAbgB0AGUAcgBuAGUAdAAgAG8AZgAgAFQAaABpAG4AZwBzACAAKABJAG8AVAApAAoALQAtAC0ALQAKAEEATABHAE8AIAA9ACAAcwB1AHAAcABvAHIAdABzACAAdABoAGUAIABjAHIAZQBhAHQAaQBvAG4AIABhAG4AZAAgAGUAeABlAGMAdQB0AGkAbwBuACAAbwBmACAAcwBtAGEAcgB0ACAAYwBvAG4AdAByAGEAYwB0AHMALAAgAHcAaABpAGMAaAAgAGUAbgBhAGIAbABlACAAdABoAGUAIABkAGUAdgBlAGwAbwBwAG0AZQBuAHQAIABvAGYAIABkAGUAYwBlAG4AdAByAGEAbABpAHoAZQBkACAAYQBwAHAAbABpAGMAYQB0AGkAbwBuAHMAIAAoAGQAQQBwAHAAcwApACAAZgBvAHIAIAB2AGEAcgBpAG8AdQBzACAAZgBpAG4AYQBuAGMAaQBhAGwAIABzAGUAcgB2AGkAYwBlAHMALAAgAGkAbgBjAGwAdQBkAGkAbgBnACAAbABlAG4AZABpAG4AZwAsACAAYgBvAHIAcgBvAHcAaQBuAGcALAAgAGEAbgBkACAAdAByAGEAZABpAG4AZwAuAAoACgB0AGgAZQBuACAAaQBtAGEAIABzAHQAbwBwACAAaABlAHIAZQAgAHQAbwBvACAAbABhAHoAeQAgAHQAbwAgAHcAcgBpAHQAZQAgAHQAaABlACAAcgBlAHMAdAAgAGwAbwBsAAoALQAtAC0ALQAKAC0ALQAtAC0ACgAtAC0ALQAtAAoALQAtAC0ALQAKAGAAYABgAAoACgAKAAoA
+                                    [CATEGORY] => CRIPTOS
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 113
+                                            [TITLE] => CUARTO--CDS--Quitar el polvo de los archivadores de CDS y meterlos bajo mi colchón en bolsas cerradas con plástico (TERMINAR)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => ROCK
+                                            [CREATEDBY] => usuario
+                                            [ICONINDEX] => 43
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [FLAG] => 1
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 75
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.34542824
+                                            [CREATIONDATESTRING] => 24/05/2024 8:17
+                                            [LASTMOD] => 45569.88319444
+                                            [LASTMODSTRING] => 04/10/2024 21:11
+                                            [LASTMODBY] => usuario
+                                            [POS] => 8
+                                            [POSSTRING] => 1.9
+                                            [CALCPERCENTDONE] => 75
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => - ✅ Limpieza con el aspirador
+- ⬜ Limpieza manual con trapos y limpia-cristales
+- ⬜ Analizar los CDS y separar lo personal de los contenidos (MP3, PELIS, CATEGORIAS, ETC)
+                                    [CUSTOMCOMMENTS] => YABgAGAACgAtACAABScgAEwAaQBtAHAAaQBlAHoAYQAgAGMAbwBuACAAZQBsACAAYQBzAHAAaQByAGEAZABvAHIACgAtACAAHCsgAEwAaQBtAHAAaQBlAHoAYQAgAG0AYQBuAHUAYQBsACAAYwBvAG4AIAB0AHIAYQBwAG8AcwAgAHkAIABsAGkAbQBwAGkAYQAtAGMAcgBpAHMAdABhAGwAZQBzAAoALQAgABwrIABBAG4AYQBsAGkAegBhAHIAIABsAG8AcwAgAEMARABTACAAeQAgAHMAZQBwAGEAcgBhAHIAIABsAG8AIABwAGUAcgBzAG8AbgBhAGwAIABkAGUAIABsAG8AcwAgAGMAbwBuAHQAZQBuAGkAZABvAHMAIAAoAE0AUAAzACwAIABQAEUATABJAFMALAAgAEMAQQBUAEUARwBPAFIASQBBAFMALAAgAEUAVABDACkACgBgAGAAYAAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 110
+                                            [TITLE] => CUARTO--DUDA--Duda de si comprar la estanteria metalica blanca para poner cachibaches
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => ROCK
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 95
+                                            [STARTDATE] => 45428.00000000
+                                            [STARTDATESTRING] => 16/05/2024
+                                            [CREATIONDATE] => 45428.49532407
+                                            [CREATIONDATESTRING] => 16/05/2024 11:53
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 9
+                                            [POSSTRING] => 1.10
+                                            [CALCPERCENTDONE] => 95
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => PENSAR--Se podria hacer todo el lateral entero no solo el metro que separa mesa de ordenador
+PENSAR--Y hacer toda la L para poder tener tb cosas encima de la mesa del PC?
+                                    [CUSTOMCOMMENTS] => YABgAGAACgBQAEUATgBTAEEAUgAtAC0AUwBlACAAcABvAGQAcgBpAGEAIABoAGEAYwBlAHIAIAB0AG8AZABvACAAZQBsACAAbABhAHQAZQByAGEAbAAgAGUAbgB0AGUAcgBvACAAbgBvACAAcwBvAGwAbwAgAGUAbAAgAG0AZQB0AHIAbwAgAHEAdQBlACAAcwBlAHAAYQByAGEAIABtAGUAcwBhACAAZABlACAAbwByAGQAZQBuAGEAZABvAHIACgBQAEUATgBTAEEAUgAtAC0AWQAgAGgAYQBjAGUAcgAgAHQAbwBkAGEAIABsAGEAIABMACAAcABhAHIAYQAgAHAAbwBkAGUAcgAgAHQAZQBuAGUAcgAgAHQAYgAgAGMAbwBzAGEAcwAgAGUAbgBjAGkAbQBhACAAZABlACAAbABhACAAbQBlAHMAYQAgAGQAZQBsACAAUABDAD8ACgBgAGAAYAAKAAoACgAAAAAA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 121
+                                            [TITLE] => CUARTO--IKEA--Comprar estanteria de madera BILLY para esquina del cuarto de ordenadores (APLAZADO)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => SOMEDAY
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.56388889
+                                            [CREATIONDATESTRING] => 24/05/2024 13:32
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 10
+                                            [POSSTRING] => 1.11
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [COMMENTS] => BILLY - LIBRERÍA, EFECTO ROBLE, 40X28X202 CM = 54,99€
+❤️ Estantería que entra en la esquina del cuarto de ordenadores junto a la ventana.
+
+Las medias que he apuntado son 48 x 30 aprox.
+
+54,99€ la de color madera
+44.99 la de color blanco
+Coste de envió a domicilio 19.90 eu = 74,8 con IVA
+
+Coste de recoger en Eroski = 5 eu
+
+https://www.ikea.com/es/es/p/billy-libreria-efecto-roble-60477382/
+Embalaje
+
+BILLY
+Librería
+Número de artículo
+604.773.82
+Ancho: 39 cm
+Alto: 7 cm
+Largo: 207 cm
+Peso: 26.92 kg
+Paquete(s): 1
+BILLY / OXBE
+                                    [CUSTOMCOMMENTS] => YABgAGAACgBCAEkATABMAFkAIAAtACAATABJAEIAUgBFAFIAzQBBACwAIABFAEYARQBDAFQATwAgAFIATwBCAEwARQAsACAANAAwAFgAMgA4AFgAMgAwADIAIABDAE0AIAA9ACAANQA0ACwAOQA5AKwgCgBkJw/+IABFAHMAdABhAG4AdABlAHIA7QBhACAAcQB1AGUAIABlAG4AdAByAGEAIABlAG4AIABsAGEAIABlAHMAcQB1AGkAbgBhACAAZABlAGwAIABjAHUAYQByAHQAbwAgAGQAZQAgAG8AcgBkAGUAbgBhAGQAbwByAGUAcwAgAGoAdQBuAHQAbwAgAGEAIABsAGEAIAB2AGUAbgB0AGEAbgBhAC4ACgAKAEwAYQBzACAAbQBlAGQAaQBhAHMAIABxAHUAZQAgAGgAZQAgAGEAcAB1AG4AdABhAGQAbwAgAHMAbwBuACAANAA4ACAAeAAgADMAMAAgAGEAcAByAG8AeAAuAAoACgA1ADQALAA5ADkArCAgAGwAYQAgAGQAZQAgAGMAbwBsAG8AcgAgAG0AYQBkAGUAcgBhAAoANAA0AC4AOQA5ACAAbABhACAAZABlACAAYwBvAGwAbwByACAAYgBsAGEAbgBjAG8ACgBDAG8AcwB0AGUAIABkAGUAIABlAG4AdgBpAPMAIABhACAAZABvAG0AaQBjAGkAbABpAG8AIAAxADkALgA5ADAAIABlAHUAIAA9ACAANwA0ACwAOAAgAGMAbwBuACAASQBWAEEACgAKAEMAbwBzAHQAZQAgAGQAZQAgAHIAZQBjAG8AZwBlAHIAIABlAG4AIABFAHIAbwBzAGsAaQAgAD0AIAA1ACAAZQB1AAoACgBoAHQAdABwAHMAOgAvAC8AdwB3AHcALgBpAGsAZQBhAC4AYwBvAG0ALwBlAHMALwBlAHMALwBwAC8AYgBpAGwAbAB5AC0AbABpAGIAcgBlAHIAaQBhAC0AZQBmAGUAYwB0AG8ALQByAG8AYgBsAGUALQA2ADAANAA3ADcAMwA4ADIALwAKAEUAbQBiAGEAbABhAGoAZQAKAAoAQgBJAEwATABZAAoATABpAGIAcgBlAHIA7QBhAAoATgD6AG0AZQByAG8AIABkAGUAIABhAHIAdADtAGMAdQBsAG8ACgA2ADAANAAuADcANwAzAC4AOAAyAAoAQQBuAGMAaABvADoAIAAzADkAIABjAG0ACgBBAGwAdABvADoAIAA3ACAAYwBtAAoATABhAHIAZwBvADoAIAAyADAANwAgAGMAbQAKAFAAZQBzAG8AOgAgADIANgAuADkAMgAgAGsAZwAKAFAAYQBxAHUAZQB0AGUAKABzACkAOgAgADEACgBCAEkATABMAFkAIAAvACAATwBYAEIARQAKAGAAYABgAAoACgAKAAoA
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 136
+                                            [TITLE] => CUARTO--MESA--ORDEN--Quitar los 2 discos duros que tengo parados
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.39237269
+                                            [CREATIONDATESTRING] => 01/07/2024 9:25
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 11
+                                            [POSSTRING] => 1.12
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 130
+                                            [TITLE] => CUARTO--ORDEN--Comprar la estanteria de metal blanca para mis tarros? (180eu aprox)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45470.00000000
+                                            [STARTDATESTRING] => 27/06/2024
+                                            [CREATIONDATE] => 45470.55791667
+                                            [CREATIONDATESTRING] => 27/06/2024 13:23
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 12
+                                            [POSSTRING] => 1.13
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 199
+                                            [TITLE] => CUARTO--Quitar los CDS y probar si se puede dejar el ordenador al lado de la mesa cerrado definitivamente y poder poner 3 monitores en la mesa
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45564.00000000
+                                            [STARTDATESTRING] => 29/09/2024
+                                            [CREATIONDATE] => 45564.60778935
+                                            [CREATIONDATESTRING] => 29/09/2024 14:35
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 13
+                                            [POSSTRING] => 1.14
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 137
+                                            [TITLE] => CUARTO--VOLANTE--LOGITECH--Meterlo en caja y al trastero
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.40089120
+                                            [CREATIONDATESTRING] => 01/07/2024 9:37
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 14
+                                            [POSSTRING] => 1.15
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => CUARTO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [15] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 107
+                                            [TITLE] => JAN--Probar en el 2697V4 con memorias DDR4 más rápidas y la RTX3060 a ver si sale aviso de lentitud de memoria (SOMEDAY)(MAYBE)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => SOMEDAY
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45428.00000000
+                                            [STARTDATESTRING] => 16/05/2024
+                                            [CREATIONDATE] => 45428.49407407
+                                            [CREATIONDATESTRING] => 16/05/2024 11:51
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 15
+                                            [POSSTRING] => 1.16
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => JAN
+                                )
+
+                            [16] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 131
+                                            [TITLE] => PASILLO--ORDEN--Limpiar trastos del pasillo. Porta fotos de tata + carrito blanco con ruedas
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.30348083
+                                            [TIMESPENTUNITS] => H
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45250.00000000
+                                            [STARTDATESTRING] => 20/11/2023
+                                            [CREATIONDATE] => 45470.56105324
+                                            [CREATIONDATESTRING] => 27/06/2024 13:27
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 16
+                                            [POSSTRING] => 1.17
+                                            [CALCTIMESPENT] => 0.30348083
+                                            [CALCTIMESPENTUNITS] => H
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => PASILLO
+                                    [METADATA] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [__selected__] => 1
+                                                )
+
+                                        )
+
+                                )
+
+                            [17] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 132
+                                            [TITLE] => PASILLO--Pensar que hacer con las 2 cajas de CDROM virgenes - BAJADAS AL TRASTERO
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => SOMEDAY
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.38927083
+                                            [CREATIONDATESTRING] => 01/07/2024 9:20
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 17
+                                            [POSSTRING] => 1.18
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => PASILLO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => PASILLO
+                                                    [VALUEDISPLAY] => PASILLO
+                                                )
+
+                                        )
+
+                                )
+
+                            [18] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 197
+                                            [TITLE] => SALON--Quitar la TV para que Marta pueda hacer yoga
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [STATUS] => NEXT
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45564.00000000
+                                            [STARTDATESTRING] => 29/09/2024
+                                            [CREATIONDATE] => 45564.44067130
+                                            [CREATIONDATESTRING] => 29/09/2024 10:34
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 18
+                                            [POSSTRING] => 1.19
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SALON
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => SALON
+                                                    [VALUEDISPLAY] => SALON
+                                                )
+
+                                        )
+
+                                )
+
+                            [19] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 182
+                                            [TITLE] => SALON--TV--Vender la TV Samsung de Marta?
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.43716435
+                                            [CREATIONDATESTRING] => 01/07/2024 10:29
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 19
+                                            [POSSTRING] => 1.20
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SALON
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => SALON
+                                                    [VALUEDISPLAY] => SALON
+                                                )
+
+                                        )
+
+                                )
+
+                            [20] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 138
+                                            [TITLE] => SERVIDOR--Evaluar si es posible montar un servidor mas potente y silencioso en casa 24-365
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => WAITING
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.40984954
+                                            [CREATIONDATESTRING] => 01/07/2024 9:50
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 20
+                                            [POSSTRING] => 1.21
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SERVIDOR
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [21] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 198
+                                            [TITLE] => SERVIDOR--Montar un servidor totalmente silencio aunque solo sea para SSD's
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => PLAIN_TEXT
+                                            [STATUS] => WISHLIST
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45564.00000000
+                                            [STARTDATESTRING] => 29/09/2024
+                                            [CREATIONDATE] => 45564.57253472
+                                            [CREATIONDATESTRING] => 29/09/2024 13:44
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 21
+                                            [POSSTRING] => 1.22
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => SERVIDOR
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [22] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 135
+                                            [TITLE] => TODOLIST--PENSAR--Merece la pena seguir usandolo si voy a migrar a LINUX?
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [DUEDATE] => 45570.00000000
+                                            [DUEDATESTRING] => 05/10/2024
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.39086806
+                                            [CREATIONDATESTRING] => 01/07/2024 9:22
+                                            [LASTMOD] => 45569.88158565
+                                            [LASTMODSTRING] => 04/10/2024 21:09
+                                            [LASTMODBY] => usuario
+                                            [POS] => 22
+                                            [POSSTRING] => 1.23
+                                            [CALCTIMEREMAINING] => -0.40114583
+                                            [CALCTIMEREMAININGUNITS] => D
+                                            [TEXTCOLOR] => 100
+                                            [TEXTWEBCOLOR] => #640000
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => TODOLIST
+                                )
+
+                            [23] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 116
+                                            [TITLE] => TRASTERO--Tirar cajas vacías que no se vayan a usar y ocupen mucho volumen en las estanterías
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.34542824
+                                            [CREATIONDATESTRING] => 24/05/2024 8:17
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 23
+                                            [POSSTRING] => 1.24
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => TRASTERO
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => TRASTERO
+                                                    [VALUEDISPLAY] => TRASTERO
+                                                )
+
+                                        )
+
+                                )
+
+                            [24] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 134
+                                            [TITLE] => XEONS--DUDA--Cambiar el 2697 a la caja del 2690?
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [DUEDATE] => 45569.00000000
+                                            [DUEDATESTRING] => 04/10/2024
+                                            [STARTDATE] => 45474.00000000
+                                            [STARTDATESTRING] => 01/07/2024
+                                            [CREATIONDATE] => 45474.38962963
+                                            [CREATIONDATESTRING] => 01/07/2024 9:21
+                                            [LASTMOD] => 45569.85263889
+                                            [LASTMODSTRING] => 04/10/2024 20:27
+                                            [LASTMODBY] => usuario
+                                            [POS] => 24
+                                            [POSSTRING] => 1.25
+                                            [CALCTIMEREMAINING] => -1.40114583
+                                            [CALCTIMEREMAININGUNITS] => D
+                                            [TEXTCOLOR] => 100
+                                            [TEXTWEBCOLOR] => #640000
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => XEONS
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [25] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 188
+                                            [TITLE] => XEONS--Ideales para PROXMOX por tener 128GB y multiples nucleos
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45507.00000000
+                                            [STARTDATESTRING] => 03/08/2024
+                                            [CREATIONDATE] => 45507.46796296
+                                            [CREATIONDATESTRING] => 03/08/2024 11:13
+                                            [LASTMOD] => 45569.84445602
+                                            [LASTMODSTRING] => 04/10/2024 20:16
+                                            [LASTMODBY] => usuario
+                                            [POS] => 25
+                                            [POSSTRING] => 1.26
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => XEONS
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [26] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 117
+                                            [TITLE] => XEONS--Que hacer con el Xeon V2 con esa caja tan enorme? (Venderlo - Regalarlo - Desmontarlo)
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [STATUS] => TO-DO
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [TIMEESTIMATE] => 0.00000000
+                                            [TIMEESTUNITS] => I
+                                            [TIMESPENT] => 0.00000000
+                                            [TIMESPENTUNITS] => I
+                                            [PERCENTDONE] => 0
+                                            [STARTDATE] => 45436.00000000
+                                            [STARTDATESTRING] => 24/05/2024
+                                            [CREATIONDATE] => 45436.34542824
+                                            [CREATIONDATESTRING] => 24/05/2024 8:17
+                                            [LASTMOD] => 45569.84674769
+                                            [LASTMODSTRING] => 04/10/2024 20:19
+                                            [LASTMODBY] => usuario
+                                            [POS] => 26
+                                            [POSSTRING] => 1.27
+                                            [TEXTCOLOR] => 25600
+                                            [TEXTWEBCOLOR] => #006400
+                                            [PRIORITYCOLOR] => 16711680
+                                            [PRIORITYWEBCOLOR] => #0000FF
+                                        )
+
+                                    [CATEGORY] => XEONS
+                                    [CUSTOMATTRIB] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ID] => CUST_LUGAR
+                                                    [VALUE] => CUARTO
+                                                    [VALUEDISPLAY] => CUARTO
+                                                )
+
+                                        )
+
+                                )
+
+                            [27] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [ID] => 205
+                                            [TITLE] => TODOLIST---Preguntar en el foro por las tablas necesarias para lo del MySQL
+                                            [REFID] => 0
+                                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                                            [CREATEDBY] => usuario
+                                            [PRIORITY] => 5
+                                            [RISK] => 0
+                                            [DONEDATE] => 45569.85362269
+                                            [DONEDATESTRING] => 04/10/2024 20:29
+                                            [PERCENTDONE] => 100
+                                            [STARTDATE] => 45569.00000000
+                                            [STARTDATESTRING] => 04/10/2024
+                                            [CREATIONDATE] => 45569.85326389
+                                            [CREATIONDATESTRING] => 04/10/2024 20:28
+                                            [LASTMOD] => 45569.85362269
+                                            [LASTMODSTRING] => 04/10/2024 20:29
+                                            [LASTMODBY] => usuario
+                                            [POS] => 27
+                                            [POSSTRING] => 1.28
+                                            [CALCPERCENTDONE] => 100
+                                            [TEXTCOLOR] => 4276287
+                                            [TEXTWEBCOLOR] => #3F4041
+                                            [PRIORITYCOLOR] => 57630
+                                            [PRIORITYWEBCOLOR] => #1EE100
+                                            [GOODASDONE] => 1
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 202
+                            [TITLE] => 2024-11-00
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45569.00000000
+                            [STARTDATESTRING] => 04/10/2024
+                            [CREATIONDATE] => 45569.82423611
+                            [CREATIONDATESTRING] => 04/10/2024 19:46
+                            [LASTMOD] => 45569.88393519
+                            [LASTMODSTRING] => 04/10/2024 21:12
+                            [LASTMODBY] => usuario
+                            [POS] => 1
+                            [POSSTRING] => 2
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                        )
+
+                )
+
+            [2] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 203
+                            [TITLE] => 2024-12-00
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45569.00000000
+                            [STARTDATESTRING] => 04/10/2024
+                            [CREATIONDATE] => 45569.82427083
+                            [CREATIONDATESTRING] => 04/10/2024 19:46
+                            [LASTMOD] => 45569.88393519
+                            [LASTMODSTRING] => 04/10/2024 21:12
+                            [LASTMODBY] => usuario
+                            [POS] => 2
+                            [POSSTRING] => 3
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                        )
+
+                )
+
+            [3] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [ID] => 194
+                            [TITLE] => 2024-10-00--OBJETIVOS--
+                            [REFID] => 0
+                            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+                            [STATUS] => NEXT
+                            [CREATEDBY] => usuario
+                            [PRIORITY] => -2
+                            [RISK] => 0
+                            [PERCENTDONE] => 0
+                            [STARTDATE] => 45564.00000000
+                            [STARTDATESTRING] => 29/09/2024
+                            [CREATIONDATE] => 45564.42401620
+                            [CREATIONDATESTRING] => 29/09/2024 10:10
+                            [LASTMOD] => 45569.90001157
+                            [LASTMODSTRING] => 04/10/2024 21:36
+                            [LASTMODBY] => usuario
+                            [COLOR] => 8421631
+                            [WEBCOLOR] => #FF8080
+                            [POS] => 3
+                            [POSSTRING] => 4
+                            [TEXTCOLOR] => 25600
+                            [TEXTWEBCOLOR] => #006400
+                        )
+
+                    [COMMENTS] => **2024-10**
+
+- [_] JAVASCRIPT--
+- [_] CSHARP--
+- [_] SEO--
+- [_] VISUAL STUDIO 2022--
+- [_] SQL SERVER--
+- [x] CLAUDE--
+- [_] CLAUDE-DEV--
+                    [CUSTOMCOMMENTS] => YABgAGAACgAqACoAMgAwADIANAAtADEAMAAqACoACgAKAC0AIABbAF8AXQAgAEoAQQBWAEEAUwBDAFIASQBQAFQALQAtAAoALQAgAFsAXwBdACAAQwBTAEgAQQBSAFAALQAtAAoALQAgAFsAXwBdACAAUwBFAE8ALQAtAAoALQAgAFsAXwBdACAAVgBJAFMAVQBBAEwAIABTAFQAVQBEAEkATwAgADIAMAAyADIALQAtAAoALQAgAFsAXwBdACAAUwBRAEwAIABTAEUAUgBWAEUAUgAtAC0ACgAtACAAWwB4AF0AIABDAEwAQQBVAEQARQAtAC0ACgAtACAAWwBfAF0AIABDAEwAQQBVAEQARQAtAEQARQBWAC0ALQAKAGAAYABgAAoACgAKAAoACgAKAAoA
+                    [CATEGORY] => OBJETIVOS
+                )
+
+        )
+
+    [CATEGORY] => Array
+        (
+            [0] => ALMACEN
+            [1] => CLICKUP
+            [2] => CLUSTER
+            [3] => CRIPTOS
+            [4] => CUARTO
+            [5] => JAN
+            [6] => OBJETIVOS
+            [7] => PASILLO
+            [8] => SALON
+            [9] => SERVIDOR
+            [10] => SOMEDAY
+            [11] => TODOLIST
+            [12] => TRASTERO
+            [13] => XEONS
+        )
+
+    [TAG] => Array
+        (
+            [0] => claves
+            [1] => imagenes
+            [2] => js
+        )
+
+    [STATUS] => Array
+        (
+            [0] => BACKLOG
+            [1] => FINISHED
+            [2] => NEXT
+            [3] => ROCK
+            [4] => SOMEDAY
+            [5] => TO-DO
+            [6] => WAITING
+            [7] => WIP
+            [8] => WISHLIST
+            [9] => ZZZFINISHED
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 201
+            [TITLE] => 2024-10-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82340278
+            [CREATIONDATESTRING] => 04/10/2024 19:45
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 0
+            [POSSTRING] => 1
+            [CALCPERCENTDONE] => 13
+            [CALCTIMEESTIMATE] => 30.00000000
+            [CALCTIMEESTUNITS] => I
+            [CALCTIMESPENT] => 18.20884980
+            [CALCTIMESPENTUNITS] => I
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+            [SUBTASKDONE] => 2/28
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 201
+            [TITLE] => 2024-10-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82340278
+            [CREATIONDATESTRING] => 04/10/2024 19:45
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 0
+            [POSSTRING] => 1
+            [CALCPERCENTDONE] => 13
+            [CALCTIMEESTIMATE] => 30.00000000
+            [CALCTIMEESTUNITS] => I
+            [CALCTIMESPENT] => 18.20884980
+            [CALCTIMESPENTUNITS] => I
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+            [SUBTASKDONE] => 2/28
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 202
+            [TITLE] => 2024-11-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82423611
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 1
+            [POSSTRING] => 2
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 202
+            [TITLE] => 2024-11-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82423611
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 1
+            [POSSTRING] => 2
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 203
+            [TITLE] => 2024-12-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82427083
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 2
+            [POSSTRING] => 3
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 203
+            [TITLE] => 2024-12-00
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45569.00000000
+            [STARTDATESTRING] => 04/10/2024
+            [CREATIONDATE] => 45569.82427083
+            [CREATIONDATESTRING] => 04/10/2024 19:46
+            [LASTMOD] => 45569.88393519
+            [LASTMODSTRING] => 04/10/2024 21:12
+            [LASTMODBY] => usuario
+            [POS] => 2
+            [POSSTRING] => 3
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task data: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 194
+            [TITLE] => 2024-10-00--OBJETIVOS--
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [STATUS] => NEXT
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45564.00000000
+            [STARTDATESTRING] => 29/09/2024
+            [CREATIONDATE] => 45564.42401620
+            [CREATIONDATESTRING] => 29/09/2024 10:10
+            [LASTMOD] => 45569.90001157
+            [LASTMODSTRING] => 04/10/2024 21:36
+            [LASTMODBY] => usuario
+            [COLOR] => 8421631
+            [WEBCOLOR] => #FF8080
+            [POS] => 3
+            [POSSTRING] => 4
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Task without title: Array
+(
+    [@attributes] => Array
+        (
+            [ID] => 194
+            [TITLE] => 2024-10-00--OBJETIVOS--
+            [REFID] => 0
+            [COMMENTSTYPE] => BAA4E079-268B-4B9B-B7C8-6D15CCF058A2
+            [STATUS] => NEXT
+            [CREATEDBY] => usuario
+            [PRIORITY] => -2
+            [RISK] => 0
+            [PERCENTDONE] => 0
+            [STARTDATE] => 45564.00000000
+            [STARTDATESTRING] => 29/09/2024
+            [CREATIONDATE] => 45564.42401620
+            [CREATIONDATESTRING] => 29/09/2024 10:10
+            [LASTMOD] => 45569.90001157
+            [LASTMODSTRING] => 04/10/2024 21:36
+            [LASTMODBY] => usuario
+            [COLOR] => 8421631
+            [WEBCOLOR] => #FF8080
+            [POS] => 3
+            [POSSTRING] => 4
+            [TEXTCOLOR] => 25600
+            [TEXTWEBCOLOR] => #006400
+        )
+
+)
+
+Successfully processed file: todolist.tdl. Tasks inserted: 0
+
+C:\xampp\htdocs>

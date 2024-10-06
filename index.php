@@ -1,14 +1,34 @@
 <?php
-/**
- * todolist2mysql
- * 
- * This script reads a TDL file and inserts the tasks into a MySQL database.
- * 
- */
-
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+// Function to create database if it doesn't exist
+function createDatabaseIfNotExists($dbName) {
+    $host = 'localhost';
+    $user = 'root';  // Adjust if different
+    $pass = '';      // Adjust if different
+
+    try {
+        $pdo = new PDO("mysql:host=$host", $user, $pass);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = "CREATE DATABASE IF NOT EXISTS `$dbName` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
+        $pdo->exec($sql);
+        echo "Database $dbName created successfully or already exists.\n";
+
+        // Use the newly created database
+        $pdo->exec("USE `$dbName`");
+
+        // Import the schema from todolist.sql
+        $schema = file_get_contents('todolist.sql');
+        $pdo->exec($schema);
+        echo "Schema imported successfully.\n";
+
+    } catch (PDOException $e) {
+        die("DB ERROR: " . $e->getMessage());
+    }
+}
 
 // Function to get database connection
 function getDatabaseConnection($dbName) {
@@ -16,6 +36,8 @@ function getDatabaseConnection($dbName) {
     $user = 'root';  // Adjust if different
     $pass = '';      // Adjust if different
     $charset = 'utf8mb4';
+
+    createDatabaseIfNotExists($dbName);
 
     $dsn = "mysql:host=$host;dbname=$dbName;charset=$charset";
     $options = [
@@ -191,9 +213,12 @@ if (php_sapi_name() === 'cli') {
         }
     }
 }
+
+// if we are in CLI then exit here to prevent the HTML from being output
 if (php_sapi_name() === 'cli') {
     exit(0);
 }
+
 ?>
 
 <!DOCTYPE html>
