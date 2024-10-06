@@ -93,7 +93,7 @@ function insertTask($pdo, $task) {
     logMessage("\r\n");
     logMessage("```");
     print_r($task);
-    logMessage("```");
+    logMessage("```\r\n");
     
 
     // FIXME: Check if the task has attributes an subtasks
@@ -122,16 +122,16 @@ function insertTask($pdo, $task) {
     echo "<code>- $title</code><br>\r\n";
 
     // show the title of the task
-    logMessage("Task title: $title");
+    logMessage('- $title='. $title);
 
     // show startdate if it exists
     if ($startdate) {
-        logMessage("Task startdate: $startdate");
+        logMessage('- $startdate='. $startdate);
     }
 
     // show comments if they exist
     if ($comments) {
-        logMessage("Task comments: ");
+        logMessage('- $comments=');
         logMessage("```");
         logMessage($comments);
         logMessage("```\r\n");
@@ -164,7 +164,7 @@ function insertTask($pdo, $task) {
 
     // Check if the task was inserted successfully       
     if ($result) {
-        $taskId = $pdo->lastInsertId();
+        $taskId = $id ?? $pdo->lastInsertId();// FIXME: is always 0 :?
         logMessage("OK--Task inserted successfully. ID: $taskId");
         logMessage("insertTask--END");
         return $taskId;
@@ -292,7 +292,7 @@ function processTDLFile($filePath, $dbName) {
     try {
         $taskCount = 0;
         foreach ($xml->TASK as $task) {
-            logMessage("\r\n----");
+            logMessage("\r\n----------------------------------------------------------------------\r\n");
             logMessage("### Processing task (taskCount=$taskCount)\r\n");
             //logMessage(print_r($task, true));
 
@@ -309,6 +309,16 @@ function processTDLFile($filePath, $dbName) {
             // Insert task into database
             $taskId = insertTask($pdo, $taskData);
 
+            // TODO: Loop to insert subtasks
+            if (!empty($taskData['TASK'])){
+                foreach($taskData['TASK'] as $subtask){
+                    $subtaskId = insertTask($pdo, $subtask);
+                    if ($subtaskId !== null) {
+                        $taskCount++;
+                    }
+                }
+            }
+
             // If the taskId is not null, then process categories
             if ($taskId !== null) {
                 $taskCount++;
@@ -323,7 +333,7 @@ function processTDLFile($filePath, $dbName) {
             }
         }
         logMessage ("TASKS-LOOP--END");
-        logMessage ("----");
+        logMessage ("--------------------------------------------------------------------------------\r\n");
         
         // Commit transaction
         $pdo->commit();
