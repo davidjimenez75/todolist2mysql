@@ -18,7 +18,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 const DEBUG = false;
-const VERSION = '24.10.06.1353';
+const VERSION = '2024.10.06.1425';
+const DISPLAY_DATABASE_URL = true; // Display link to phpMyAdmin if enabled
 
 // Function to log messages
 function logMessage($message) {
@@ -327,8 +328,11 @@ if (php_sapi_name() === 'cli') {
 <?php
 // Display success message if file was uploaded
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['tdlFile'])) {
-    $phpmyadmin='http://localhost/phpmyadmin/index.php?route=/sql&server=1&db='.$dbName.'&table=tasks&pos=0';
-    echo '<center><br><a href="'.$phpmyadmin.'" target="_blank">View Database</a></center>';
+    // Display link to phpMyAdmin if enabled
+    if (DISPLAY_DATABASE_URL) {
+        $phpmyadmin='http://localhost/phpmyadmin/index.php?route=/sql&server=1&db='.$dbName.'&table=tasks&pos=0';
+        echo '<center><br><a href="'.$phpmyadmin.'" target="_blank">View Database</a></center>';
+    }
 }
 ?>
 
