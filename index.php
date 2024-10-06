@@ -94,10 +94,13 @@ function insertTask($pdo, $task) {
 
     // FIXME: Check if the task has attributes an subtasks
     if($task['@attributes']) {
+
         // comments are not attributes
         $comments=$task['COMMENTS'] ?? $task['comments'] ?? null;
 
-        
+        // get the task id from the attributes an will be used as id in mysql   
+        $id=$task['@attributes']['ID'] ?? $task['id'] ?? null;
+      
         // get startdate from attributes and transfor to  YYYY-MM-DD
         $startdate = $task['@attributes']['STARTDATE'] ?? null;
         if($startdate) {
@@ -139,10 +142,11 @@ function insertTask($pdo, $task) {
         return null; // Skip tasks without a title
     }
 
-    $sql = "INSERT INTO tasks (title, status, priority, percentdone, startdate, duedate, creationdate, lastmod, comments) 
+    $sql = "INSERT INTO tasks (id, title, status, priority, percentdone, startdate, duedate, creationdate, lastmod, comments) 
             VALUES (:title, :status, :priority, :percentdone, :startdate, :duedate, :creationdate, :lastmod, :comments)";
     $stmt = $pdo->prepare($sql);
     $result = $stmt->execute([
+        ':id' => $id ?? $task['ID'] ?? $task['id'] ?? null,
         ':title' => $title,
         ':status' => $task['STATUS'] ?? $task['status'] ?? null,
         ':priority' => $task['PRIORITY'] ?? $task['priority'] ?? null,

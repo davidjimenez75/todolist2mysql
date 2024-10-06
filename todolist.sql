@@ -1,6 +1,6 @@
 -- Table for tasks
 CREATE TABLE tasks (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     status VARCHAR(50),
     priority INT,
