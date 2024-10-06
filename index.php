@@ -429,6 +429,17 @@ if (php_sapi_name() === 'cli') {
 <body>
     <center>
 
+
+
+    <h1><a href="./index.php">todolist2csv</a></h1>
+    <div id="drop_zone">
+        <p>Drag and drop a .tdl file here</p>
+        <form id="upload_form" method="post" enctype="multipart/form-data">
+            <input type="file" name="tdlFile" id="file_input" style="display: none;" accept=".tdl">
+        </form>
+    </div>
+
+
 <?php
 // Display success message if file was uploaded
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['tdlFile'])) {
@@ -440,13 +451,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['tdlFile'])) {
 }
 ?>
 
-    <h1><a href="./index.php">todolist2csv</a></h1>
-    <div id="drop_zone">
-        <p>Drag and drop a .tdl file here</p>
-        <form id="upload_form" method="post" enctype="multipart/form-data">
-            <input type="file" name="tdlFile" id="file_input" style="display: none;" accept=".tdl">
-        </form>
-    </div>
+
     </center>
 
     <script>
