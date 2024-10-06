@@ -77,7 +77,7 @@ function insertTask($pdo, $task) {
     // Ensure title is not null
     $title = $task['TITLE'] ?? $task['title'] ?? null;
     if ($title === null) {
-        logMessage("Task without title: " . print_r($task, true));
+        logMessage("ERROR: Task without title: " . print_r($task, true));
         return null; // Skip tasks without a title
     }
 
@@ -205,10 +205,13 @@ function processTDLFile($filePath, $dbName) {
             $taskData = (array)$task;
             // Check if attributes exist, if not, use the task element itself
             if (empty($taskData['@attributes'])) {
+                if (DEBUG) echo "No found attributes\r\n";
                 $taskData = (array)$task;
             } else {
-                $taskData = (array)$task->attributes();
+                if (DEBUG) echo "Found attributes\r\n";
+                $taskData = array_merge(array(), (array)$taskData['@attributes']);//FIXME - check if this is correct
             }
+            // Insert task into database
             $taskId = insertTask($pdo, $taskData);
 
             // If the taskId is not null, then process categories
@@ -229,6 +232,7 @@ function processTDLFile($filePath, $dbName) {
         // Commit transaction
         $pdo->commit();
         logMessage("Data inserted successfully. Total tasks processed: $taskCount");
+        logMessage("----");
     } catch (Exception $e) {
         // Rollback transaction on error
         $pdo->rollBack();
