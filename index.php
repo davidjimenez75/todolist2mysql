@@ -89,16 +89,21 @@ function getDatabaseConnection($dbName) {
 
 // Function to insert task into database
 function insertTask($pdo, $task) {
+    $task=(array) $task; //FIXME: check if this is necessary
     logMessage("insertTask--BEGIN");
     logMessage("\r\n");
     logMessage("```");
-    print_r($task);
+    if (DEBUG) print_r($task);
     logMessage("```\r\n");
     
+    // Ensure values are not null
+    $id=null;
+    $startdate=null;
+    $comments=null;
+        
 
     // FIXME: Check if the task has attributes an subtasks
-    if($task['@attributes']) {
-
+    if (isset($task['@attributes'])){
         // comments are not attributes
         $comments=$task['COMMENTS'] ?? $task['comments'] ?? null;
 
@@ -119,7 +124,14 @@ function insertTask($pdo, $task) {
     $title = $task['TITLE'] ?? $task['title'] ?? null;
 
     // visual in website
-    echo "<code>- $title</code><br>\r\n";
+    if (($id!=null) && ($title!=null)){
+        echo "<br>\r\n";
+        echo '<code style="color:red">- ';
+        echo $title." (".$id.")";
+        echo '</code>';
+        echo "\r\n";
+   
+    }
 
     // show the title of the task
     logMessage('- $title='. $title);
@@ -145,6 +157,13 @@ function insertTask($pdo, $task) {
         logMessage("ERROR: Task without title: " . print_r($task, true));
         return null; // Skip tasks without a title
     }
+
+    // Skip tasks without a id
+    if ($id === null) {
+        logMessage("ERROR: Task without id: " . print_r($task, true));
+        return null; // Skip tasks without id
+    }
+    
 
     $sql = "INSERT INTO tasks (id, title, status, priority, percentdone, startdate, duedate, creationdate, lastmod, comments) 
             VALUES (:id, :title, :status, :priority, :percentdone, :startdate, :duedate, :creationdate, :lastmod, :comments)";
@@ -173,11 +192,6 @@ function insertTask($pdo, $task) {
         logMessage("insertTask--END");
         return null;
     }
-
-    // pause while key is pressed
-    logMessage("Press any key to continue...");
-    $key = fgetc(STDIN);
-
 }
 
 // Function to insert category into database
